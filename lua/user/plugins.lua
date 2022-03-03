@@ -22,11 +22,14 @@ packer.init {
 
 return packer.startup(function()
     use("wbthomason/packer.nvim")
+    use("nvim-lua/popup.nvim")
+    use("nvim-lua/plenary.nvim")
 
-    use("kyazdani42/nvim-tree.lua")
     use("kyazdani42/nvim-web-devicons")
-
+    use("kyazdani42/nvim-tree.lua")
     use("goolord/alpha-nvim")
+    use('akinsho/bufferline.nvim')
+    use("github/copilot.vim")
 
     use("wakatime/vim-wakatime")
 
