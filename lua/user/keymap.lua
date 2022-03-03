@@ -15,10 +15,11 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Basic Shortcuts
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-n>", ":ene <BAR> startinsert <CR>", opts)
-keymap("n", "<C-w>", ":q<CR>", opts)
+keymap("n", "<C-w>", "<cmd>bdelete!<CR>", opts)
 
 -- Save files
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("i", "<C-s>", "<esc>:w<CR>", opts)
 
 keymap("n", "<C-q>", ":qa<CR>", opts)
+

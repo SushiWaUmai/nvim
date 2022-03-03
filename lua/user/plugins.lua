@@ -22,8 +22,8 @@ packer.init {
 
 return packer.startup(function()
     use("wbthomason/packer.nvim")
-    use("nvim-lua/popup.nvim")
     use("nvim-lua/plenary.nvim")
+    use("nvim-lua/popup.nvim")
 
     use("kyazdani42/nvim-web-devicons")
     use("kyazdani42/nvim-tree.lua")
