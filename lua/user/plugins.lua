@@ -21,17 +21,27 @@ packer.init {
 }
 
 return packer.startup(function()
+    -- Package Manager
     use("wbthomason/packer.nvim")
-    use("nvim-lua/plenary.nvim")
-    use("nvim-lua/popup.nvim")
 
+    -- Icons
     use("kyazdani42/nvim-web-devicons")
+
+    -- File Explorer
     use("kyazdani42/nvim-tree.lua")
+
+    -- Start Menu
     use("goolord/alpha-nvim")
-    use("windwp/nvim-autopairs")
+
+    -- Tabs
     use("akinsho/bufferline.nvim")
+
+    -- Intellisense
+    use("neovim/nvim-lspconfig")
+    use("windwp/nvim-autopairs")
     use("github/copilot.vim")
 
+    -- Tracking
     use("wakatime/vim-wakatime")
 
     -- Color Themes
