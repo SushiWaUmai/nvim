@@ -28,6 +28,7 @@ return packer.startup(function()
     use("kyazdani42/nvim-web-devicons")
     use("kyazdani42/nvim-tree.lua")
     use("goolord/alpha-nvim")
+    use("windwp/nvim-autopairs")
     use("akinsho/bufferline.nvim")
     use("github/copilot.vim")
 

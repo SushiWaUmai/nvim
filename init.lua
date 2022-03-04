@@ -6,6 +6,7 @@ require("user.theme")
 
 -- Plugin Configs
 require("user.alpha")
-require("user.nvim-tree")
+require("user.autopairs")
+require("user.tree")
 require("user.bufferline")
 
