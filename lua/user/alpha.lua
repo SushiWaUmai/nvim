@@ -1,7 +1,7 @@
 local alpha = require("alpha")
 local fn = vim.fn
 
-local dashboard = require "alpha.themes.dashboard"
+local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
  "  ███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗  ",
  "  ████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║  ",
@@ -13,6 +13,7 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
   dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
+  dashboard.button("b", "Browse Folder", ":NvimTreeToggle<CR>"),
   dashboard.button("c", "Config", ":e " .. fn.stdpath("config") .. "/init.lua <CR>"),
   dashboard.button("p", "Update Packages", ":PackerSync <CR>"),
   dashboard.button("h", "Check Health", ":checkhealth <CR>"),

@@ -2,8 +2,8 @@ local bufferline = require("bufferline")
 bufferline.setup({
     options = {
         numbers = "none",
-        close_command = "Bdelete! %d",
-        right_mouse_command = "Bdelete! %d",
+        close_command = "bdelete! %d",
+        right_mouse_command = "bdelete! %d",
         middle_mouse_command = nil,
         left_mouse_command = "buffer %d",
         indicator_icon = "▎",

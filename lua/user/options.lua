@@ -26,8 +26,6 @@ local options = {
     relativenumber = false,
     signcolumn = "yes",
     wrap = false,
-    scrolloff = 8,
-    sidescrolloff = 8,
     guifont = "monospace:h17"
 }
 
