@@ -2,8 +2,7 @@ local fn = vim.fn
 
 local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-    PACKER_BOOTSTRAP = fn.system {"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim",
-                                  install_path}
+    PACKER_BOOTSTRAP = fn.system {"git", "clone", "--depth", "1", "https://github.com/wbthomason/packer.nvim", install_path}
     print("Installing packer close and reopen Neovim...")
     vim.cmd("packadd packer.nvim")
 end
@@ -21,31 +20,26 @@ packer.init {
 }
 
 return packer.startup(function()
-    -- Package Manager
-    use("wbthomason/packer.nvim")
+    use("wbthomason/packer.nvim") -- Package Manager
 
-    -- Icons
-    use("kyazdani42/nvim-web-devicons")
+    use("kyazdani42/nvim-web-devicons") -- Icons
 
-    -- File Explorer
-    use("kyazdani42/nvim-tree.lua")
+    use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+    use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
+    use("kyazdani42/nvim-tree.lua") -- File Explorer
+    use("goolord/alpha-nvim") -- Start Menu
+    use("akinsho/bufferline.nvim") -- Tabs
 
-    -- Start Menu
-    use("goolord/alpha-nvim")
+    use("neovim/nvim-lspconfig") -- lsp config
+    use("williamboman/nvim-lsp-installer") -- lsp installer
+    use("tamago324/nlsp-settings.nvim") -- lsp settings per project
+    use("b0o/SchemaStore.nvim") -- json schemas
+    use("windwp/nvim-autopairs") -- autopairs eg: ( ) { }
+    use("github/copilot.vim") -- github copilot
 
-    -- Tabs
-    use("akinsho/bufferline.nvim")
+    use("wakatime/vim-wakatime") -- Time Tracking
 
-    -- Intellisense
-    use("neovim/nvim-lspconfig")
-    use("windwp/nvim-autopairs")
-    use("github/copilot.vim")
-
-    -- Tracking
-    use("wakatime/vim-wakatime")
-
-    -- Color Themes
-    use("Mofiqul/vscode.nvim")
+    use("Mofiqul/vscode.nvim") -- Color Themes
 
     if PACKER_BOOTSTRAP then
         packer.sync()
