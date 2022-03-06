@@ -3,6 +3,11 @@ if not cmp_status_ok then
   return
 end
 
+local cmp_keymap_status_ok, cmp_keymap = pcall(require, "user.keymap.cmp")
+if not cmp_keymap_status_ok then
+  return
+end
+
 local cmp_lsp_status_ok, cmp_lsp = pcall(require, "cmp_nvim_lsp")
 if not cmp_lsp_status_ok then
   return
@@ -14,39 +19,28 @@ cmp.setup({
       vim.fn["vsnip#anonymous"](args.body)
     end,
   },
-  -- TODO: Move this to keymap
-  mapping = {
-    ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
-    ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
-    ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), { 'i', 'c' }),
-    ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-    ['<C-e>'] = cmp.mapping({
-      i = cmp.mapping.abort(),
-      c = cmp.mapping.close(),
-    }),
-    ['<Tab>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-  },
+  mapping = cmp_keymap,
   sources = cmp.config.sources({
-    { name = 'nvim_lsp' },
-    { name = 'vsnip' },
+    { name = "nvim_lsp" },
+    { name = "vsnip" },
   }, {
-    { name = 'buffer' },
+    { name = "buffer" },
   })
 })
 
 -- for searching
-cmp.setup.cmdline('/', {
+cmp.setup.cmdline("/", {
   sources = {
-    { name = 'buffer' }
+    { name = "buffer" }
   }
 })
 
 -- for vim commands
-cmp.setup.cmdline(':', {
+cmp.setup.cmdline(":", {
   sources = cmp.config.sources({
-    { name = 'path' }
+    { name = "path" }
   }, {
-    { name = 'cmdline' }
+    { name = "cmdline" }
   })
 })
 
