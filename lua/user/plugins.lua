@@ -46,6 +46,13 @@ return packer.startup(function()
 
     use("williamboman/nvim-lsp-installer") -- lsp installer
     use("tamago324/nlsp-settings.nvim") -- lsp settings per project
+
+    -- Telescope
+    use("nvim-telescope/telescope.nvim") -- telescope
+    use("nvim-telescope/telescope-ui-select.nvim") -- telescope UI
+    use("nvim-telescope/telescope-file-browser.nvim") -- File Browser
+    use("nvim-telescope/telescope-media-files.nvim") -- displays media files (png, jpeg, etc) [Only works on linux]
+
     use("b0o/SchemaStore.nvim") -- json schemas
     use("windwp/nvim-autopairs") -- autopairs eg: ( ) { }
     use("github/copilot.vim") -- github copilot

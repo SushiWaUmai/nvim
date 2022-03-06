@@ -32,5 +32,9 @@ return {
             Default = "",
             Symlink = "",
         }
+    },
+    ui = {
+        Search = "",
+        SelectionCarret = "",
     }
 }
