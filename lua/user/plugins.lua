@@ -30,6 +30,7 @@ return packer.startup(function()
     use("goolord/alpha-nvim") -- Start Menu
     use("akinsho/bufferline.nvim") -- Tabs
     use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
+    use("filipdutescu/renamer.nvim") -- renaming system
 
     use("neovim/nvim-lspconfig") -- lsp config
     use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp

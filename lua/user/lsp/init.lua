@@ -24,12 +24,12 @@ lsp_installer.on_server_ready(function(server)
     }
 
     local lang_opts_status_ok, lang_opts = pcall(require, "user.lsp.settings." .. server.name)
-    if not lang_opts_status_ok then
-        return
+    if lang_opts_status_ok then
+        opts = vim.tbl_deep_extend("force", lang_opts, opts)
     end
 
-    opts = vim.tbl_deep_extend("force", lang_opts, opts)
     opts = vim.tbl_deep_extend("force", cmp_capabilities, opts)
 
+    print("Setting up " .. server.name .. "...")
     server:setup(opts)
 end)

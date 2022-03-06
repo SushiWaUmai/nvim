@@ -1,9 +1,11 @@
-local lspkeymap = {}
-local opts = { noremap = true, silent = true }
+local keymap_opts = require("user.keymap.utils")
 
-local keymap = vim.api.nvim_set_keymap
-local bufkeymap = vim.api.nvim_buf_set_keymap
-local bufoption = vim.api.nvim_buf_set_option
+local keymap = keymap_opts.keymap
+local bufoption = keymap_opts.bufoption
+local bufkeymap = keymap_opts.bufkeymap
+local opts = keymap_opts.opts
+
+local lspkeymap = {}
 
 keymap('n', '<space>e', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
 keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
