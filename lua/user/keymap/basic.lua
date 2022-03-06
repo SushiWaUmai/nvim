@@ -16,12 +16,17 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 -- Basic Shortcuts
 keymap("n", "<C-b>", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<C-n>", ":ene <BAR> startinsert <CR>", opts)
-keymap("n", "<C-w>", "<cmd>bdelete!<CR>", opts)
+keymap("n", "<C-w>", "<cmd>Bdelete!<CR>", opts)
 
 -- Save files
 keymap("n", "<C-s>", ":w<CR>", opts)
 keymap("i", "<C-s>", "<esc>:w<CR>", opts)
 
+-- Undo
+keymap("n", "<C-z>", "u", opts)
+keymap("i", "<C-z>", "<esc>u", opts)
+
+-- Close
 keymap("n", "<C-q>", ":qa<CR>", opts)
 
 -- Move lines around using visual mode

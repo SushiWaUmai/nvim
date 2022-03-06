@@ -1,13 +1,13 @@
 local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
-  return
+    return
 end
 
 bufferline.setup({
     options = {
         numbers = "none",
-        close_command = "bdelete! %d",
-        right_mouse_command = "bdelete! %d",
+        close_command = "Bdelete! %d",
+        right_mouse_command = "Bdelete! %d",
         middle_mouse_command = nil,
         left_mouse_command = "buffer %d",
         indicator_icon = "▎",
@@ -24,12 +24,6 @@ bufferline.setup({
             end,
             highlight = "Directory",
             text_align = "left"
-        }, {
-            filetype = "alpha",
-            text = function()
-                return vim.fn.getcwd()
-            end,
-            padding = 1
         }},
 
         show_buffer_icons = true,
