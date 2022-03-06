@@ -8,6 +8,11 @@ if not lsp_keymap_status_ok then
     return
 end
 
+local cmp_capabilities_status_ok, cmp_capabilities = pcall(require, "user.cmp")
+if not cmp_capabilities_status_ok then
+    return
+end
+
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
 lsp_installer.on_server_ready(function(server)
@@ -24,6 +29,7 @@ lsp_installer.on_server_ready(function(server)
     end
 
     opts = vim.tbl_deep_extend("force", lang_opts, opts)
+    opts = vim.tbl_deep_extend("force", cmp_capabilities, opts)
 
     server:setup(opts)
 end)

@@ -32,14 +32,21 @@ return packer.startup(function()
     use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 
     use("neovim/nvim-lspconfig") -- lsp config
+    use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
+    use("hrsh7th/cmp-buffer") -- cmp with bufferline
+    use("hrsh7th/cmp-path") -- cmp with path
+    use("hrsh7th/cmp-cmdline") -- cmp in terminal
+    use("hrsh7th/nvim-cmp") -- cmp
+    
+    use('hrsh7th/cmp-vsnip') -- vsnip with cmp
+    use('hrsh7th/vim-vsnip') -- vsnip with vim
+
     use("williamboman/nvim-lsp-installer") -- lsp installer
     use("tamago324/nlsp-settings.nvim") -- lsp settings per project
     use("b0o/SchemaStore.nvim") -- json schemas
     use("windwp/nvim-autopairs") -- autopairs eg: ( ) { }
     use("github/copilot.vim") -- github copilot
-
     use("wakatime/vim-wakatime") -- Time Tracking
-
     use("Mofiqul/vscode.nvim") -- Color Themes
 
     if PACKER_BOOTSTRAP then
