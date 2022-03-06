@@ -11,3 +11,7 @@ function _G.set_terminal_keymaps()
  bufkeymap(0, 't', '<C-k>', [[<C-\><C-n><C-W>k]], opts)
  bufkeymap(0, 't', '<C-l>', [[<C-\><C-n><C-W>l]], opts)
 end
+
+return {
+    open_mapping = [[<C-\>]]
+}
