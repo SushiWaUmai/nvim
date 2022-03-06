@@ -30,6 +30,5 @@ lsp_installer.on_server_ready(function(server)
 
     opts = vim.tbl_deep_extend("force", cmp_capabilities, opts)
 
-    print("Setting up " .. server.name .. "...")
     server:setup(opts)
 end)

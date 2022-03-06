@@ -31,6 +31,7 @@ return packer.startup(function()
     use("akinsho/bufferline.nvim") -- Tabs
     use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
     use("filipdutescu/renamer.nvim") -- renaming system
+    use("akinsho/toggleterm.nvim") -- Embedded terminal
 
     use("neovim/nvim-lspconfig") -- lsp config
     use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
@@ -38,7 +39,7 @@ return packer.startup(function()
     use("hrsh7th/cmp-path") -- cmp with path
     use("hrsh7th/cmp-cmdline") -- cmp in terminal
     use("hrsh7th/nvim-cmp") -- cmp
-    
+
     use('hrsh7th/cmp-vsnip') -- vsnip with cmp
     use('hrsh7th/vim-vsnip') -- vsnip with vim
 

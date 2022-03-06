@@ -1,4 +1,5 @@
 # My Nvim Config
+This repo is inspired by [ChristianChiarulli's nvim config](https://github.com/ChristianChiarulli/nvim)
 
 ## Getting Started
 

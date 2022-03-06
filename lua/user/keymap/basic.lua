@@ -1,6 +1,7 @@
-local opts = { noremap = true, silent = true }
+local keymap_opts = require("user.keymap.utils")
 
-local keymap = vim.api.nvim_set_keymap
+local keymap = keymap_opts.keymap
+local opts = keymap_opts.opts
 
 -- Navigate windows
 keymap("n", "<C-h>", "<C-w>h", opts)
