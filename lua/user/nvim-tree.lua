@@ -8,6 +8,35 @@ if not config_status_ok then
   return
 end
 
+local icons = require("user.icons")
+
+vim.g.nvim_tree_icons = {
+  default = icons.fs.file.Default,
+  symlink = icons.fs.file.Symlink,
+  git = {
+    unstaged = icons.git.Modify,
+    staged = icons.git.Staged,
+    unmerged = icons.git.Unmerged,
+    renamed = icons.git.Rename,
+    deleted = icons.git.Remove,
+    untracked = icons.git.Untracked,
+    ignored = icons.git.Ignore,
+  },
+  folder = {
+    default = icons.fs.dir.Closed,
+    open = icons.fs.dir.Open,
+    empty = icons.fs.dir.Empty,
+    empty_open = icons.fs.dir.EmptyOpen,
+    symlink = icons.fs.dir.Symlink,
+  },
+  lsp = {
+    error = icons.diagnostics.Error,
+    warning = icons.diagnostics.Warning,
+    information = icons.diagnostics.Information,
+    hint = icons.diagnostics.Hint,
+  }
+}
+
 local tree_cb = nvim_tree_config.nvim_tree_callback
 
 nvim_tree.setup({
