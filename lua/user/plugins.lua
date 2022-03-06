@@ -29,6 +29,7 @@ return packer.startup(function()
     use("kyazdani42/nvim-tree.lua") -- File Explorer
     use("goolord/alpha-nvim") -- Start Menu
     use("akinsho/bufferline.nvim") -- Tabs
+    use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 
     use("neovim/nvim-lspconfig") -- lsp config
     use("williamboman/nvim-lsp-installer") -- lsp installer

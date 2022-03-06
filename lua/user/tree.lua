@@ -16,8 +16,6 @@ nvim_tree.setup({
   open_on_setup        = false,
   ignore_buffer_on_setup = false,
   ignore_ft_on_setup = {
-    "startify",
-    "dashboard",
     "alpha",
   },
   auto_close           = true,
