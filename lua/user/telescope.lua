@@ -18,8 +18,7 @@ telescope.setup({
     pickers = {},
     extensions = {
         ["media_files"] = {
-            filetypes = {"png", "webp", "jpg", "jpeg"},
-            find_cmd = "rg" -- find command (defaults to `fd`)
+            -- use the default media_files configuration
         },
         ["file_browser"] = {
             mappings = telescope_keymap.file_browser

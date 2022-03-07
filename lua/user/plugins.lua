@@ -31,9 +31,12 @@ return packer.startup(function()
     use("akinsho/bufferline.nvim") -- Tabs
     use("moll/vim-bbye") -- Closing Tabs
     use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
+    use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
+    use("romgrk/nvim-treesitter-context") -- Treesitter context utility 
     use("filipdutescu/renamer.nvim") -- renaming system
     use("akinsho/toggleterm.nvim") -- Embedded terminal
     use("nvim-lualine/lualine.nvim") -- Status bar
+    use("numToStr/Comment.nvim") -- Commenting
 
     use("neovim/nvim-lspconfig") -- lsp config
     use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
