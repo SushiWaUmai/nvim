@@ -33,6 +33,7 @@ return packer.startup(function()
     use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
     use("filipdutescu/renamer.nvim") -- renaming system
     use("akinsho/toggleterm.nvim") -- Embedded terminal
+    use("nvim-lualine/lualine.nvim") -- Status bar
 
     use("neovim/nvim-lspconfig") -- lsp config
     use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
@@ -57,7 +58,9 @@ return packer.startup(function()
     use("windwp/nvim-autopairs") -- autopairs eg: ( ) { }
     use("github/copilot.vim") -- github copilot
     use("wakatime/vim-wakatime") -- Time Tracking
-    use("Mofiqul/vscode.nvim") -- Color Themes
+
+    use("Mofiqul/vscode.nvim") -- vscode color theme
+    use("olimorris/onedarkpro.nvim") -- onedarkpro color theme
 
     if PACKER_BOOTSTRAP then
         packer.sync()

@@ -1,8 +1,11 @@
 require("user.plugins")
 require("user.keymap")
 require("user.options")
+require("user.autocmd")
 
+-- Visual
 require("user.theme")
+require("user.lualine")
 
 -- Plugin Configs
 require("user.alpha")
