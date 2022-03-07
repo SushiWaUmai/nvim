@@ -15,33 +15,17 @@ telescope.setup({
         path_display = {"smart"},
         mappings = telescope_keymap.defaults
     },
-    pickers = {
-        -- Default configuration for builtin pickers goes here:
-        -- picker_name = {
-        --   picker_config_key = value,
-        --   ...
-        -- }
-        -- Now the picker_config_key will be applied every time you call this
-        -- builtin picker
-    },
+    pickers = {},
     extensions = {
-        media_files = {
-            -- filetypes whitelist
-            -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+        ["media_files"] = {
             filetypes = {"png", "webp", "jpg", "jpeg"},
             find_cmd = "rg" -- find command (defaults to `fd`)
         },
-        file_browser = {
-            -- theme = "ivy",
-            -- require("telescope.themes").get_dropdown {
-            --   previewer = false,
-            --   -- even more opts
-            -- },
+        ["file_browser"] = {
             mappings = telescope_keymap.file_browser
         },
         ["ui-select"] = {require("telescope.themes").get_dropdown {
             previewer = false
-            -- even more opts
         }}
     }
 })
