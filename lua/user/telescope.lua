@@ -5,7 +5,6 @@ end
 
 local telescope_keymap = require("user.keymap.telescope")
 
-telescope.load_extension("media_files")
 local icons = require("user.icons")
 
 telescope.setup({
@@ -17,10 +16,11 @@ telescope.setup({
     },
     pickers = {},
     extensions = {
-        ["media_files"] = {
-            -- use the default media_files configuration
+        media_files = {
+            filetypes = {"png", "webp", "jpg", "jpeg"},
+            find_cmd = "rg"
         },
-        ["file_browser"] = {
+        file_browser = {
             mappings = telescope_keymap.file_browser
         },
         ["ui-select"] = {require("telescope.themes").get_dropdown {
@@ -31,3 +31,5 @@ telescope.setup({
 
 telescope.load_extension("ui-select")
 telescope.load_extension("file_browser")
+telescope.load_extension("media_files")
+

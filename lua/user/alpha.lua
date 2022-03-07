@@ -17,10 +17,12 @@ dashboard.section.header.val = {
 
 dashboard.section.buttons.val = {
   dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
+  dashboard.button("f", "Find file", ":Telescope find_files <CR>"),
+  dashboard.button("t", "Find text", ":Telescope live_grep <CR>"),
   dashboard.button("b", "Browse Folder", ":NvimTreeToggle<CR>"),
   dashboard.button("c", "Config", ":e " .. fn.stdpath("config") .. "/init.lua <CR>"),
-  dashboard.button("p", "Update Packages", ":PackerSync<CR>:TSUpdate<CR>"),
-  dashboard.button("h", "Check Health", ":checkhealth<CR>"),
+  dashboard.button("p", "Update Packages", ":PackerSync <CR>"),
+  dashboard.button("h", "Check Health", ":checkhealth <CR>"),
   dashboard.button("q", "Quit", ":qa<CR>"),
 }
 local function footer()
