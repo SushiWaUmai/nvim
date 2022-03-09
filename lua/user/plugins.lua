@@ -51,6 +51,8 @@ return packer.startup(function()
     use("williamboman/nvim-lsp-installer") -- lsp installer
     use("tamago324/nlsp-settings.nvim") -- lsp settings per project
 
+    use("mfussenegger/nvim-dap") -- dap
+
     -- Telescope
     use("nvim-telescope/telescope.nvim") -- telescope
     use("nvim-telescope/telescope-ui-select.nvim") -- telescope UI

@@ -20,4 +20,5 @@ require("user.treesitter")
 require("user.cmp")
 require("user.renamer")
 require("user.comment")
+require("user.dap")
 
