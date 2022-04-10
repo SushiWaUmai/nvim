@@ -18,7 +18,6 @@ require("user.copilot")
 require("user.lsp")
 require("user.treesitter")
 require("user.cmp")
-require("user.renamer")
 require("user.comment")
 require("user.dap")
 
