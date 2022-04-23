@@ -44,7 +44,6 @@ nvim_tree.setup({
     hijack_netrw = true,
     open_on_setup = false,
     ignore_ft_on_setup = {"alpha"},
-    auto_close = true,
     open_on_tab = false,
     hijack_cursor = false,
     update_cwd = true,
@@ -111,3 +110,4 @@ nvim_tree.setup({
         tree_width = 30
     }
 })
+
