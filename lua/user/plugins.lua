@@ -37,6 +37,7 @@ return packer.startup(function()
     use("nvim-lualine/lualine.nvim") -- Status bar
     use("lukas-reineke/indent-blankline.nvim") -- Indentation
     use("numToStr/Comment.nvim") -- Commenting
+    use("lewis6991/gitsigns.nvim") -- Git Signs
 
     use("neovim/nvim-lspconfig") -- lsp config
     use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
