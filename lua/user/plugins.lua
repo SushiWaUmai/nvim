@@ -24,7 +24,7 @@ return packer.startup(function()
 
     use("kyazdani42/nvim-web-devicons") -- Icons
 
-    use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+    use("nvim-lua/plenary.nvim") -- Useful lua functions used in lots of plugins
     use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
     use("kyazdani42/nvim-tree.lua") -- File Explorer
     use("goolord/alpha-nvim") -- Start Menu
@@ -32,9 +32,10 @@ return packer.startup(function()
     use("moll/vim-bbye") -- Closing Tabs
     use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
     use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
-    use("romgrk/nvim-treesitter-context") -- Treesitter context utility 
+    use("romgrk/nvim-treesitter-context") -- Treesitter context utility
     use("akinsho/toggleterm.nvim") -- Embedded terminal
     use("nvim-lualine/lualine.nvim") -- Status bar
+    use("lukas-reineke/indent-blankline.nvim") -- Indentation
     use("numToStr/Comment.nvim") -- Commenting
 
     use("neovim/nvim-lspconfig") -- lsp config
