@@ -53,8 +53,8 @@ return packer.startup(function()
 	use("hrsh7th/cmp-cmdline") -- cmp in terminal
 	use("hrsh7th/nvim-cmp") -- cmp
 
-	use("hrsh7th/cmp-vsnip") -- vsnip with cmp
-	use("hrsh7th/vim-vsnip") -- vsnip with vim
+    use('L3MON4D3/LuaSnip') -- LuaSnip with neovim
+    use('saadparwaiz1/cmp_luasnip') -- LuaSnip with cmp
 
 	use("williamboman/nvim-lsp-installer") -- lsp installer
 	use("tamago324/nlsp-settings.nvim") -- lsp settings per project
