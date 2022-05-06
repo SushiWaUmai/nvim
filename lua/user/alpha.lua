@@ -1,32 +1,32 @@
 local status_ok, alpha = pcall(require, "alpha")
 if not status_ok then
-  return
+	return
 end
 
 local fn = vim.fn
 
 local dashboard = require("alpha.themes.dashboard")
 dashboard.section.header.val = {
- "  ███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗  ",
- "  ████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║  ",
- "  ██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║  ",
- "  ██║╚████║██╔══╝░░██║░░██║░╚████╔╝░██║██║╚██╔╝██║  ",
- "  ██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║  ",
- "  ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝  ",
+	"  ███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗  ",
+	"  ████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║  ",
+	"  ██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║  ",
+	"  ██║╚████║██╔══╝░░██║░░██║░╚████╔╝░██║██║╚██╔╝██║  ",
+	"  ██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║  ",
+	"  ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝  ",
 }
 
 dashboard.section.buttons.val = {
-  dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
-  dashboard.button("f", "Find file", ":Telescope find_files <CR>"),
-  dashboard.button("t", "Find text", ":Telescope live_grep <CR>"),
-  dashboard.button("b", "Browse Folder", ":NvimTreeToggle<CR>"),
-  dashboard.button("c", "Config", ":e " .. fn.stdpath("config") .. "/init.lua <CR>"),
-  dashboard.button("p", "Update Packages", ":PackerSync <CR>"),
-  dashboard.button("h", "Check Health", ":checkhealth <CR>"),
-  dashboard.button("q", "Quit", ":qa<CR>"),
+	dashboard.button("e", "New file", ":ene <BAR> startinsert <CR>"),
+	dashboard.button("f", "Find file", ":Telescope find_files <CR>"),
+	dashboard.button("t", "Find text", ":Telescope live_grep <CR>"),
+	dashboard.button("b", "Browse Folder", ":NvimTreeToggle<CR>"),
+	dashboard.button("c", "Config", ":e " .. fn.stdpath("config") .. "/init.lua <CR>"),
+	dashboard.button("p", "Update Packages", ":PackerSync <CR>"),
+	dashboard.button("h", "Check Health", ":checkhealth <CR>"),
+	dashboard.button("q", "Quit", ":qa<CR>"),
 }
 local function footer()
-  return "https://github.com/SushiWaUmai"
+	return "https://github.com/SushiWaUmai"
 end
 
 dashboard.section.footer.val = footer()
