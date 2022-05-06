@@ -1,29 +1,48 @@
-local status_ok, treesitter_config = pcall(require, "nvim-treesitter.configs")
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
-  return
+    return
 end
 
-treesitter_config.setup({
-  ensure_installed = "maintained",
-  sync_install = false,
-  highlight = {
-    enable = true,
-    additional_vim_regex_highlighting = true,
-  },
-  context_commentstring = {
-    enable = true
-  }
+local ft_to_parser = require"nvim-treesitter.parsers".filetype_to_parsername
+ft_to_parser.motoko = "typescript"
+
+configs.setup({
+    ensure_installed = "all", -- one of "all" or a list of languages
+    sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
+    ignore_install = { "" }, -- List of parsers to ignore installing
+    highlight = {
+    -- use_languagetree = true,
+        enable = true, -- false will disable the whole extension
+        -- disable = { "css", "html" }, -- list of language that will be disabled
+        disable = { "css", "markdown" }, -- list of language that will be disabled
+        additional_vim_regex_highlighting = true,
+    },
+    autopairs = {
+        enable = true,
+    },
+    indent = { enable = true, disable = { "python", "css" } },
+    context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+    },
+    autotag = {
+        enable = true,
+        disable = { "xml" },
+    },
+    rainbow = {
+        enable = true,
+        colors = {
+            "Gold",
+            "Orchid",
+            "DodgerBlue",
+            -- "Cornsilk",
+            -- "Salmon",
+            -- "LawnGreen",
+        },
+        disable = { "html" },
+    },
+    playground = {
+        enable = true,
+    },
 })
 
-local context_status_ok, context = pcall(require, "treesitter-context")
-if not context_status_ok then
-	return
-end
-
-context.setup{
-    enable = false,
-    throttle = true,
-    max_lines = 0,
-    patterns = {
-  },
-}
