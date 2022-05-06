@@ -6,6 +6,17 @@ local opts = keymap_opts.opts
 -- Navigate windows
 keymap("n", "<C-h>", "<C-w>h", opts)
 
+-- use ESC to turn off search highlighting
+keymap("n", "<Esc>", "<cmd> :noh <CR>", opts)
+
+-- move cursor within insert mode
+keymap("i", "<C-h>", "<Left>", opts)
+keymap("i", "<C-e>", "<End>", opts)
+keymap("i", "<C-l>", "<Right>", opts)
+keymap("i", "<C-j>", "<Down>", opts)
+keymap("i", "<C-k>", "<Up>", opts)
+keymap("i", "<C-a>", "<ESC>^i", opts)
+
 -- Navigate windows
 keymap("n", "<C-h>", "<C-w>h", opts)
 keymap("n", "<C-j>", "<C-w>j", opts)
