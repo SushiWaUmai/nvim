@@ -3,24 +3,27 @@ if not status_ok then
 	return
 end
 
-dap.adapters.cppdbg = {
-	id = "cppdbg",
+dap.adapters.lldb = {
 	type = "executable",
-	command = os.getenv("HOME") .. "/.vscode/extensions/ms-vscode.cpptools-1.8.4/debugAdapters/bin/OpenDebugAD7",
+	command = "/usr/bin/lldb-vscode",
+    name = "lldb"
 }
 
-dap.configurations.cpp = {
-	{
-		name = "Launch file",
-		type = "cppdbg",
-		request = "launch",
-		program = function()
-			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
-		end,
-		cwd = "${workspaceFolder}",
-		stopOnEntry = true,
-	},
+dap.configurations.c = {
+  {
+    name = "Launch",
+    type = "lldb",
+    request = "launch",
+    program = function()
+      return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+    end,
+    cwd = '${workspaceFolder}',
+    stopOnEntry = false,
+    args = {},
+    runInTerminal = false
+  },
 }
 
-dap.configurations.c = dap.configurations.cpp
-dap.configurations.rust = dap.configurations.cpp
+dap.configurations.cpp = dap.configurations.c
+dap.configurations.rust = dap.configurations.c
+
