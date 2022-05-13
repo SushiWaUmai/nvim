@@ -82,4 +82,11 @@ nvim_tree.setup({
 		number = false,
 		relativenumber = false,
 	},
+    actions = {
+        open_file = {
+            resize_window = true
+        }
+    }
 })
+
+vim.cmd([[set nosplitright]])
