@@ -60,6 +60,7 @@ return packer.startup(function()
 	use("tamago324/nlsp-settings.nvim") -- lsp settings per project
 
 	use("mfussenegger/nvim-dap") -- dap
+    use("rcarriga/nvim-dap-ui") -- dap-ui
 
 	use("sbdchd/neoformat") -- formatting
 
