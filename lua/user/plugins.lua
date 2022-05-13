@@ -37,9 +37,12 @@ return packer.startup(function()
 	use("goolord/alpha-nvim") -- Start Menu
 	use("akinsho/bufferline.nvim") -- Tabs
 	use("moll/vim-bbye") -- Closing Tabs
+
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
 	use("romgrk/nvim-treesitter-context") -- Treesitter context utility
+    use("SmiteshP/nvim-gps") -- GPS
+
 	use("akinsho/toggleterm.nvim") -- Embedded terminal
 	use("nvim-lualine/lualine.nvim") -- Status bar
 	use("lukas-reineke/indent-blankline.nvim") -- Indentation
