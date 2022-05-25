@@ -19,9 +19,6 @@ if not luasnip_status_ok then
 end
 
 cmp.setup({
-	completion = {
-		autocomplete = false,
-	},
 	snippet = {
 		expand = function(args)
 			luasnip.lsp_expand(args.body)
@@ -45,6 +42,9 @@ cmp.setup.cmdline("/", {
 
 -- for vim commands
 cmp.setup.cmdline(":", {
+	completion = {
+		autocomplete = false,
+	},
 	sources = cmp.config.sources({
 		{ name = "path" },
 	}, {
