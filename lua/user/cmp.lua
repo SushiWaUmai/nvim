@@ -13,10 +13,15 @@ if not cmp_lsp_status_ok then
 	return
 end
 
+local luasnip_status_ok, luasnip = pcall(require, "luasnip")
+if not luasnip_status_ok then
+	return
+end
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
-			vim.fn["vsnip#anonymous"](args.body)
+			luasnip.lsp_expand(args.body)
 		end,
 	},
 	mapping = cmp_keymap,
