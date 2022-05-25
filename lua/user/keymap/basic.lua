@@ -34,7 +34,7 @@ keymap("n", "<C-w>", "<cmd>Bdelete!<CR>", opts)
 
 -- Save files
 keymap("n", "<C-s>", ":w<CR>", opts)
-keymap("i", "<C-s>", "<esc>:w<CR>", opts)
+keymap("i", "<C-s>", "<esc>:w<CR>^i", opts)
 
 -- Undo
 keymap("n", "<C-z>", "u", opts)
