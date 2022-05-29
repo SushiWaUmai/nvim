@@ -37,11 +37,12 @@ return packer.startup(function()
 	use("goolord/alpha-nvim") -- Start Menu
 	use("akinsho/bufferline.nvim") -- Tabs
 	use("moll/vim-bbye") -- Closing Tabs
+	use("rcarriga/nvim-notify") -- Notify
 
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
 	use("romgrk/nvim-treesitter-context") -- Treesitter context utility
-    use("SmiteshP/nvim-gps") -- GPS
+	use("SmiteshP/nvim-gps") -- GPS
 
 	use("akinsho/toggleterm.nvim") -- Embedded terminal
 	use("nvim-lualine/lualine.nvim") -- Status bar
@@ -63,7 +64,7 @@ return packer.startup(function()
 	use("tamago324/nlsp-settings.nvim") -- lsp settings per project
 
 	use("mfussenegger/nvim-dap") -- dap
-    use("rcarriga/nvim-dap-ui") -- dap-ui
+	use("rcarriga/nvim-dap-ui") -- dap-ui
 
 	use("sbdchd/neoformat") -- formatting
 
@@ -78,6 +79,7 @@ return packer.startup(function()
 	use("github/copilot.vim") -- github copilot
 	use("wakatime/vim-wakatime") -- Time Tracking
 
+	-- Color Scheme
 	use("Mofiqul/vscode.nvim") -- vscode color theme
 	use("olimorris/onedarkpro.nvim") -- onedarkpro color theme
 
