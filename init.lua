@@ -3,10 +3,6 @@ require("user.keymap")
 require("user.options")
 require("user.autocmd")
 
--- Visual
-require("user.theme")
-require("user.lualine")
-
 -- Plugin Configs
 require("user.nvim-tree")
 require("user.bufferline")
@@ -23,3 +19,7 @@ require("user.blankline")
 require("user.gitsigns")
 require("user.alpha")
 require("user.comment")
+
+-- Visual
+require("user.theme")
+require("user.lualine")
