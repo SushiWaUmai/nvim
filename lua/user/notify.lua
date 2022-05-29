@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-local icons = require "user.icons"
+local icons = require("user.icons")
 
 notify.setup {
   stages = "fade_in_slide_out",
@@ -17,8 +17,8 @@ notify.setup {
     ERROR = icons.diagnostics.Error,
     WARN = icons.diagnostics.Warning,
     INFO = icons.diagnostics.Information,
-    DEBUG = icons.ui.Bug,
-    TRACE = icons.ui.Pencil,
+    DEBUG = icons.diagnostics.Debug,
+    TRACE = icons.diagnostics.Trace,
   },
 }
 

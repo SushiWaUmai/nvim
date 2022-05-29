@@ -3,6 +3,8 @@ return {
 		Error = "",
 		Warning = "",
 		Information = "",
+		Debug = "",
+		Trace = "",
 		Question = "",
 		Hint = "",
 	},
