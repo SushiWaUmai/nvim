@@ -34,4 +34,8 @@ for k, v in pairs(options) do
 end
 
 vim.opt.shortmess:append("c")
+
 vim.cmd([[set iskeyword+=-]])
+
+vim.cmd([[set shiftwidth=2]])
+vim.cmd([[set tabstop=2]])
