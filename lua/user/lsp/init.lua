@@ -1,4 +1,5 @@
 require("user.lsp.config")
+local lsp_sig = require("user.lsp.signature")
 
 local lsp_installer_status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
 if not lsp_installer_status_ok then
@@ -34,3 +35,5 @@ lsp_installer.on_server_ready(function(server)
 
 	server:setup(opts)
 end)
+
+lsp_sig.setup_signature()

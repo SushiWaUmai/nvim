@@ -56,6 +56,7 @@ return packer.startup(function()
 	use("hrsh7th/cmp-path") -- cmp with path
 	use("hrsh7th/cmp-cmdline") -- cmp in terminal
 	use("hrsh7th/nvim-cmp") -- cmp
+	use("ray-x/lsp_signature.nvim") -- Lsp signature
 
 	use("L3MON4D3/LuaSnip") -- LuaSnip with neovim
 	use("saadparwaiz1/cmp_luasnip") -- LuaSnip with cmp
