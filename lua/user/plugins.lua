@@ -38,6 +38,7 @@ return packer.startup(function()
 	use("akinsho/bufferline.nvim") -- Tabs
 	use("moll/vim-bbye") -- Closing Tabs
 	use("rcarriga/nvim-notify") -- Notify
+  use("ellisonleao/glow.nvim") -- Markdown preview
 
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
