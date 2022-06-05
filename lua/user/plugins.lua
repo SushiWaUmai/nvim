@@ -52,6 +52,8 @@ return packer.startup(function()
 	use("lewis6991/gitsigns.nvim") -- Git Signs
 
 	use("neovim/nvim-lspconfig") -- lsp config
+  use("onsails/lspkind-nvim") -- lspkind
+  use("nvim-lua/lsp-status.nvim") -- lsp status
 	use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
 	use("hrsh7th/cmp-buffer") -- cmp with bufferline
 	use("hrsh7th/cmp-path") -- cmp with path

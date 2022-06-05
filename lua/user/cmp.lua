@@ -18,6 +18,11 @@ if not luasnip_status_ok then
 	return
 end
 
+local lspkind_status_ok, lspkind = pcall(require, "lspkind")
+if not lspkind_status_ok then
+	return
+end
+
 cmp.setup({
 	snippet = {
 		expand = function(args)
@@ -31,6 +36,18 @@ cmp.setup({
 	}, {
 		{ name = "buffer" },
 	}),
+	formatting = {
+		format = lspkind.cmp_format({
+			mode = "symbol",
+			maxwidth = 50,
+
+			-- The function below will be called before any actual modifications from lspkind
+			-- so that you can provide more controls on popup customization. (See [#30](https://github.com/onsails/lspkind-nvim/pull/30))
+			before = function(entry, vim_item)
+				return vim_item
+			end,
+		}),
+	},
 })
 
 -- for searching
@@ -47,8 +64,6 @@ cmp.setup.cmdline(":", {
 	},
 	sources = cmp.config.sources({
 		{ name = "path" },
-	}, {
-		{ name = "cmdline" },
 	}),
 })
 

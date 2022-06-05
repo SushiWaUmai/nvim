@@ -1,4 +1,5 @@
 require("user.lsp.config")
+require("user.lsp.status")
 local lsp_sig = require("user.lsp.signature")
 
 local lsp_installer_status_ok, lsp_installer = pcall(require, "nvim-lsp-installer")
