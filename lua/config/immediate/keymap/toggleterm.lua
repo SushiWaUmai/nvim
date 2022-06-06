@@ -1,16 +1,14 @@
 local keymap_opts = require("config.immediate.keymap.utils")
 
-local bufkeymap = keymap_opts.bufkeymap
+local keymap = keymap_opts.keymap
 local opts = keymap_opts.opts
 
-function _G.set_terminal_keymaps()
-	bufkeymap(0, "t", "<esc>", [[<C-\><C-n>]], opts)
-	bufkeymap(0, "t", "jk", [[<C-\><C-n>]], opts)
-	bufkeymap(0, "t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
-	bufkeymap(0, "t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
-	bufkeymap(0, "t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
-	bufkeymap(0, "t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
-end
+keymap("t", "<esc>", [[<C-\><C-n>]], opts)
+keymap("t", "jk", [[<C-\><C-n>]], opts)
+keymap("t", "<C-h>", [[<C-\><C-n><C-W>h]], opts)
+keymap("t", "<C-j>", [[<C-\><C-n><C-W>j]], opts)
+keymap("t", "<C-k>", [[<C-\><C-n><C-W>k]], opts)
+keymap("t", "<C-l>", [[<C-\><C-n><C-W>l]], opts)
 
 return {
 	open_mapping = [[<C-\>]],
