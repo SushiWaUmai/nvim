@@ -19,6 +19,7 @@ require("user.blankline")
 require("user.gitsigns")
 require("user.alpha")
 require("user.comment")
+require("user.colorizer")
 
 -- Visual
 require("user.theme")

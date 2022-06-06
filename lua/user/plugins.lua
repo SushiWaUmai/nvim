@@ -39,6 +39,7 @@ return packer.startup(function()
 	use("moll/vim-bbye") -- Closing Tabs
 	use("rcarriga/nvim-notify") -- Notify
   use("ellisonleao/glow.nvim") -- Markdown preview
+  use("norcalli/nvim-colorizer.lua") -- Hex Colorizer
 
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
