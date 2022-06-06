@@ -1,4 +1,4 @@
-local toggleterm_keymap = require("user.keymap.toggleterm")
+local toggleterm_keymap = require("config.immediate.keymap.toggleterm")
 
 local status_ok, toggleterm = pcall(require, "toggleterm")
 if not status_ok then

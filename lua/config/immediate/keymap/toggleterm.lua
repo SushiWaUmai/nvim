@@ -1,4 +1,4 @@
-local keymap_opts = require("user.keymap.utils")
+local keymap_opts = require("config.immediate.keymap.utils")
 
 local bufkeymap = keymap_opts.bufkeymap
 local opts = keymap_opts.opts

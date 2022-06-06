@@ -3,9 +3,9 @@ if not status_ok then
 	return
 end
 
-local telescope_keymap = require("user.keymap.telescope")
+local telescope_keymap = require("config.immediate.keymap.telescope")
 
-local icons = require("user.icons")
+local icons = require("config.icons")
 
 telescope.setup({
 	defaults = {

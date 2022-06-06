@@ -3,7 +3,7 @@ if not cmp_status_ok then
 	return
 end
 
-local cmp_keymap_status_ok, cmp_keymap = pcall(require, "user.keymap.cmp")
+local cmp_keymap_status_ok, cmp_keymap = pcall(require, "config.immediate.keymap.cmp")
 if not cmp_keymap_status_ok then
 	return
 end
