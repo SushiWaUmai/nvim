@@ -82,6 +82,9 @@ return packer.startup(function()
 	use("b0o/SchemaStore.nvim") -- json schemas
 	use("windwp/nvim-autopairs") -- autopairs eg: ( ) { }
 	use("github/copilot.vim") -- github copilot
+  use("zbirenbaum/copilot.lua") -- Lua Copilot
+  use("zbirenbaum/copilot-cmp") -- Copilot cmp
+
 	use("wakatime/vim-wakatime") -- Time Tracking
 
 	-- Color Scheme

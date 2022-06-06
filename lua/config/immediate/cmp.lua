@@ -31,7 +31,9 @@ cmp.setup({
 	},
 	mapping = cmp_keymap,
 	sources = cmp.config.sources({
+		{ name = "copilot" },
 		{ name = "nvim_lsp" },
+		{ name = "path" },
 		{ name = "luasnip" },
 	}, {
 		{ name = "buffer" },
