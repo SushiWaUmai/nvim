@@ -88,6 +88,8 @@ return packer.startup(function()
 
 	use("wakatime/vim-wakatime") -- Time Tracking
 
+  use("xiyaowong/nvim-transparent") -- transparent
+
 	-- Color Scheme
 	use("Mofiqul/vscode.nvim") -- vscode color theme
 	use("olimorris/onedarkpro.nvim") -- onedarkpro color theme
