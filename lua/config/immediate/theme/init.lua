@@ -1,4 +1,4 @@
-local colortheme = "iceberg"
+local colortheme = "nord"
 
 require("config.immediate.theme.transparent")
 require("config.immediate.theme.vscode")

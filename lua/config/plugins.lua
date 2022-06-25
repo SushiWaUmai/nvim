@@ -94,6 +94,7 @@ return packer.startup(function()
 	use("Mofiqul/vscode.nvim") -- vscode color theme
 	use("olimorris/onedarkpro.nvim") -- onedarkpro color theme
   use("cocopon/iceberg.vim") -- iceberg color theme
+  use("arcticicestudio/nord-vim") -- nord color theme
 
 	if PACKER_BOOTSTRAP then
 		packer.sync()
