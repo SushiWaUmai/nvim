@@ -66,6 +66,7 @@ return packer.startup(function()
   use("williamboman/mason.nvim") -- lsp installer
   use("williamboman/mason-lspconfig.nvim") -- mason lsp config
 	use("neovim/nvim-lspconfig") -- lsp config
+  use("mfussenegger/nvim-lint") -- linting
 
 	use("L3MON4D3/LuaSnip") -- LuaSnip with neovim
 	use("saadparwaiz1/cmp_luasnip") -- LuaSnip with cmp
