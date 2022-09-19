@@ -73,7 +73,7 @@ return packer.startup(function()
 	use("mfussenegger/nvim-dap") -- dap
 	use("rcarriga/nvim-dap-ui") -- dap-ui
 
-	use("sbdchd/neoformat") -- formatting
+  use("mhartington/formatter.nvim") -- formatter
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim") -- telescope
