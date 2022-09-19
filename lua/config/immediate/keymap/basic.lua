@@ -3,9 +3,6 @@ local keymap_opts = require("config.immediate.keymap.utils")
 local keymap = keymap_opts.keymap
 local opts = keymap_opts.opts
 
--- Navigate windows
-keymap("n", "<C-h>", "<C-w>h", opts)
-
 -- use ESC to turn off search highlighting
 keymap("n", "<Esc>", "<cmd> :noh <CR>", opts)
 
