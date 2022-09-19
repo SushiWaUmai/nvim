@@ -55,21 +55,20 @@ return packer.startup(function()
 	use("numToStr/Comment.nvim") -- Commenting
 	use("lewis6991/gitsigns.nvim") -- Git Signs
 
-	use("neovim/nvim-lspconfig") -- lsp config
   use("onsails/lspkind-nvim") -- lspkind
   use("nvim-lua/lsp-status.nvim") -- lsp status
+	use("ray-x/lsp_signature.nvim") -- Lsp signature
 	use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
 	use("hrsh7th/cmp-buffer") -- cmp with bufferline
 	use("hrsh7th/cmp-path") -- cmp with path
 	use("hrsh7th/cmp-cmdline") -- cmp in terminal
 	use("hrsh7th/nvim-cmp") -- cmp
-	use("ray-x/lsp_signature.nvim") -- Lsp signature
+  use("williamboman/mason.nvim") -- lsp installer
+  use("williamboman/mason-lspconfig.nvim") -- mason lsp config
+	use("neovim/nvim-lspconfig") -- lsp config
 
 	use("L3MON4D3/LuaSnip") -- LuaSnip with neovim
 	use("saadparwaiz1/cmp_luasnip") -- LuaSnip with cmp
-
-	use("williamboman/nvim-lsp-installer") -- lsp installer
-	use("tamago324/nlsp-settings.nvim") -- lsp settings per project
 
 	use("mfussenegger/nvim-dap") -- dap
 	use("rcarriga/nvim-dap-ui") -- dap-ui

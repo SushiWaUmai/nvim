@@ -16,7 +16,7 @@ local options = {
 		"TelescopePrompt",
 		"TelescopeResults",
 		"nvchad_cheatsheet",
-		"lsp-installer",
+		"mason",
 		"",
 	},
 	buftype_exclude = { "terminal" },
