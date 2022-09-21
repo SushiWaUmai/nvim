@@ -3,8 +3,7 @@ if not lualine_status_ok then
 	return
 end
 
-
-local gps_status_ok, gps  = pcall(require, "nvim-gps")
+local gps_status_ok, gps = pcall(require, "nvim-gps")
 if not gps_status_ok then
 	return
 end

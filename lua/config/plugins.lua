@@ -16,7 +16,7 @@ end
 
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  return
+	return
 end
 
 packer.init({
@@ -41,8 +41,8 @@ return packer.startup(function()
 	use("akinsho/bufferline.nvim") -- Tabs
 	use("moll/vim-bbye") -- Closing Tabs
 	use("rcarriga/nvim-notify") -- Notify
-  use("ellisonleao/glow.nvim") -- Markdown preview
-  use("norcalli/nvim-colorizer.lua") -- Hex Colorizer
+	use("ellisonleao/glow.nvim") -- Markdown preview
+	use("norcalli/nvim-colorizer.lua") -- Hex Colorizer
 
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
@@ -55,18 +55,18 @@ return packer.startup(function()
 	use("numToStr/Comment.nvim") -- Commenting
 	use("lewis6991/gitsigns.nvim") -- Git Signs
 
-  use("onsails/lspkind-nvim") -- lspkind
-  use("nvim-lua/lsp-status.nvim") -- lsp status
+	use("onsails/lspkind-nvim") -- lspkind
+	use("nvim-lua/lsp-status.nvim") -- lsp status
 	use("ray-x/lsp_signature.nvim") -- Lsp signature
 	use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
 	use("hrsh7th/cmp-buffer") -- cmp with bufferline
 	use("hrsh7th/cmp-path") -- cmp with path
 	use("hrsh7th/cmp-cmdline") -- cmp in terminal
 	use("hrsh7th/nvim-cmp") -- cmp
-  use("williamboman/mason.nvim") -- lsp installer
-  use("williamboman/mason-lspconfig.nvim") -- mason lsp config
+	use("williamboman/mason.nvim") -- lsp installer
+	use("williamboman/mason-lspconfig.nvim") -- mason lsp config
 	use("neovim/nvim-lspconfig") -- lsp config
-  use("mfussenegger/nvim-lint") -- linting
+	use("mfussenegger/nvim-lint") -- linting
 
 	use("L3MON4D3/LuaSnip") -- LuaSnip with neovim
 	use("saadparwaiz1/cmp_luasnip") -- LuaSnip with cmp
@@ -74,7 +74,7 @@ return packer.startup(function()
 	use("mfussenegger/nvim-dap") -- dap
 	use("rcarriga/nvim-dap-ui") -- dap-ui
 
-  use("mhartington/formatter.nvim") -- formatter
+	use("mhartington/formatter.nvim") -- formatter
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim") -- telescope
@@ -88,13 +88,13 @@ return packer.startup(function()
 
 	use("wakatime/vim-wakatime") -- Time Tracking
 
-  use("xiyaowong/nvim-transparent") -- transparent
+	use("xiyaowong/nvim-transparent") -- transparent
 
 	-- Color Scheme
 	use("Mofiqul/vscode.nvim") -- vscode color theme
 	use("olimorris/onedarkpro.nvim") -- onedarkpro color theme
-  use("cocopon/iceberg.vim") -- iceberg color theme
-  use("arcticicestudio/nord-vim") -- nord color theme
+	use("cocopon/iceberg.vim") -- iceberg color theme
+	use("arcticicestudio/nord-vim") -- nord color theme
 
 	if PACKER_BOOTSTRAP then
 		packer.sync()

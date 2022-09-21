@@ -5,4 +5,3 @@ local opts = keymap_opts.opts
 
 keymap("n", "<A-p>", "<cmd>Copilot<CR>", opts)
 keymap("i", "<A-p>", "<cmd>Copilot<CR>", opts)
-

@@ -11,9 +11,9 @@ bufferline.setup({
 		middle_mouse_command = nil,
 		left_mouse_command = "buffer %d",
 		indicator = {
-      icon = "▎",
-      style = "icon"
-    },
+			icon = "▎",
+			style = "icon",
+		},
 		buffer_close_icon = "",
 		modified_icon = "●",
 		close_icon = "",
