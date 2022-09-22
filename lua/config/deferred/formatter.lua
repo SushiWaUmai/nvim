@@ -10,6 +10,18 @@ formatter.setup({
 		lua = {
 			require("formatter.filetypes.lua").stylua,
 		},
+		javascript = {
+			require("formatter.filetypes.typescript").prettier,
+		},
+		javascriptreact = {
+			require("formatter.filetypes.typescript").prettier,
+		},
+		typescript = {
+			require("formatter.filetypes.typescript").prettier,
+		},
+		typescriptreact = {
+			require("formatter.filetypes.typescript").prettier,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
