@@ -8,6 +8,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
       require("config.deferred.formatter")
       require("config.deferred.lint")
 			require("config.deferred.lsp")
+			require("config.deferred.navic")
 			require("config.deferred.dap")
 			require("config.deferred.treesitter")
 			require("config.deferred.copilot")

@@ -12,7 +12,7 @@ keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
 keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
 keymap("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
-function lspkeymap.on_attach(_, bufnr)
+function lspkeymap.on_attach(bufnr)
 	-- Enable completion triggered by <c-x><c-o>
 	bufoption(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 

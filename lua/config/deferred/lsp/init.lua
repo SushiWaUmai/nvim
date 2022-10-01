@@ -4,12 +4,12 @@ local lsp_sig = require("config.deferred.lsp.signature")
 
 local mason_lspconfig_status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
 if not mason_lspconfig_status_ok then
-  return
+	return
 end
 
 local lspconfig_status_ok, lspconfig = pcall(require, "lspconfig")
 if not lspconfig_status_ok then
-  return
+	return
 end
 
 local lsp_keymap_status_ok, lsp_keymap = pcall(require, "config.immediate.keymap.lsp")
@@ -22,12 +22,22 @@ if not cmp_capabilities_status_ok then
 	return
 end
 
+local navic_status_ok, navic = pcall(require, "nvim-navic")
+if not navic_status_ok then
+	return
+end
+
 mason_lspconfig.setup()
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 for _, server in pairs(mason_lspconfig.get_installed_servers()) do
 	local opts = {
-		on_attach = lsp_keymap.on_attach,
+		on_attach = function(client, bufnr)
+			lsp_keymap.on_attach(bufnr)
+			if client.server_capabilities.documentSymbolProvider then
+				navic.attach(client, bufnr)
+			end
+		end,
 		flags = {
 			debounce_text_changes = 150,
 		},
@@ -40,7 +50,7 @@ for _, server in pairs(mason_lspconfig.get_installed_servers()) do
 
 	opts = vim.tbl_deep_extend("force", cmp_capabilities, opts)
 
-  lspconfig[server].setup(opts)
+	lspconfig[server].setup(opts)
 end
 
 lsp_sig.setup_signature()
