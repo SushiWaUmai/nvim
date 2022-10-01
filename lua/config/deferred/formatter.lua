@@ -10,6 +10,9 @@ formatter.setup({
 		lua = {
 			require("formatter.filetypes.lua").stylua,
 		},
+		java = {
+			require("formatter.defaults.clangformat"),
+		},
 		javascript = {
 			require("formatter.filetypes.typescript").prettier,
 		},
