@@ -27,7 +27,13 @@ if not navic_status_ok then
 	return
 end
 
+local lsp_inlayhints_status_ok, lsp_inlayhints = pcall(require, "lsp-inlayhints")
+if not lsp_inlayhints_status_ok then
+	return
+end
+
 mason_lspconfig.setup()
+lsp_inlayhints.setup()
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 for _, server in pairs(mason_lspconfig.get_installed_servers()) do
@@ -37,6 +43,7 @@ for _, server in pairs(mason_lspconfig.get_installed_servers()) do
 			if client.server_capabilities.documentSymbolProvider then
 				navic.attach(client, bufnr)
 			end
+      lsp_inlayhints.on_attach(client, bufnr)
 		end,
 		flags = {
 			debounce_text_changes = 150,
