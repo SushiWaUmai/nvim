@@ -3,16 +3,19 @@ if not status_ok then
 	return
 end
 
-dap.adapters.lldb = {
-	type = "executable",
-	command = "/usr/bin/lldb-vscode",
-	name = "lldb",
+dap.adapters.codelldb = {
+	type = "server",
+	port = "${port}",
+	executable = {
+		command = "codelldb",
+		args = { "--port", "${port}" },
+	},
 }
 
 dap.configurations.c = {
 	{
-		name = "Launch",
-		type = "lldb",
+		name = "Launch File",
+		type = "codelldb",
 		request = "launch",
 		program = function()
 			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
