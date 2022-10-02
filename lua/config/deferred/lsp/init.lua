@@ -43,7 +43,7 @@ for _, server in pairs(mason_lspconfig.get_installed_servers()) do
 			if client.server_capabilities.documentSymbolProvider then
 				navic.attach(client, bufnr)
 			end
-      lsp_inlayhints.on_attach(client, bufnr)
+			lsp_inlayhints.on_attach(client, bufnr)
 		end,
 		flags = {
 			debounce_text_changes = 150,
