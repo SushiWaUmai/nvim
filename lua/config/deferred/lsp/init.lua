@@ -34,12 +34,31 @@ end
 
 local fidget_status_ok, fidget = pcall(require, "fidget")
 if not fidget_status_ok then
-  return
+	return
 end
 
 fidget.setup()
 mason_lspconfig.setup()
-lsp_inlayhints.setup()
+lsp_inlayhints.setup({
+	inlay_hints = {
+		parameter_hints = {
+			show = false,
+			separator = ", ",
+		},
+		type_hints = {
+			show = true,
+			prefix = "",
+			separator = ", ",
+			remove_colon_end = false,
+			remove_colon_start = false,
+		},
+		labels_separator = "  ",
+		max_len_align = false,
+		max_len_align_padding = 1,
+		right_align = false,
+		right_align_padding = 7,
+	},
+})
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 for _, server in pairs(mason_lspconfig.get_installed_servers()) do
