@@ -10,6 +10,7 @@ require("config.immediate.blankline")
 require("config.immediate.alpha")
 require("config.immediate.comment")
 require("config.immediate.colorizer")
+require("config.immediate.numb")
 
 -- Visual
 require("config.immediate.theme")

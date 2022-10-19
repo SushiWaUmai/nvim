@@ -43,6 +43,7 @@ return packer.startup(function()
 	use("rcarriga/nvim-notify") -- Notify
 	use("ellisonleao/glow.nvim") -- Markdown preview
 	use("norcalli/nvim-colorizer.lua") -- Hex Colorizer
+	use("nacro90/numb.nvim") -- peek lines
 
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 	use("nvim-treesitter/nvim-treesitter-context") -- Treesitter context utility
