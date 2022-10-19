@@ -13,4 +13,19 @@ configs.setup({
 		additional_vim_regex_highlighting = true,
 		use_languagetree = true,
 	},
+	autotag = {
+		enable = true,
+	},
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+		colors = {
+			"#BF616A",
+			"#D08770",
+			"#EBCB8B",
+			"#A3BE8C",
+			"#B48EAD",
+		},
+	},
 })

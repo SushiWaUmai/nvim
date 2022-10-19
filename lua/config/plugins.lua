@@ -45,9 +45,11 @@ return packer.startup(function()
 	use("norcalli/nvim-colorizer.lua") -- Hex Colorizer
 
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
+	use("nvim-treesitter/nvim-treesitter-context") -- Treesitter context utility
+	use("p00f/nvim-ts-rainbow") -- rainbow parenthesis
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
-	use("romgrk/nvim-treesitter-context") -- Treesitter context utility
-  use("rrethy/vim-illuminate") -- Highlighting of other uses
+	use("windwp/nvim-ts-autotag") -- autoclose or rename html tags
+	use("rrethy/vim-illuminate") -- Highlighting of other uses
 
 	use("akinsho/toggleterm.nvim") -- Embedded terminal
 	use("nvim-lualine/lualine.nvim") -- Status bar
@@ -68,7 +70,7 @@ return packer.startup(function()
 	use("ray-x/lsp_signature.nvim") -- Lsp signature
 	use("neovim/nvim-lspconfig") -- lsp config
 	use("lvimuser/lsp-inlayhints.nvim") -- lsp inlay hints
-  use("j-hui/fidget.nvim") -- lsp progress bar
+	use("j-hui/fidget.nvim") -- lsp progress bar
 	use("mfussenegger/nvim-lint") -- linting
 
 	use("L3MON4D3/LuaSnip") -- LuaSnip with neovim
