@@ -14,3 +14,4 @@ require("config.immediate.colorizer")
 -- Visual
 require("config.immediate.theme")
 require("config.immediate.lualine")
+require("config.immediate.illuminate")

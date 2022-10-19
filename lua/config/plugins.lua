@@ -47,6 +47,7 @@ return packer.startup(function()
 	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
 	use("romgrk/nvim-treesitter-context") -- Treesitter context utility
+  use("rrethy/vim-illuminate") -- Highlighting of other uses
 
 	use("akinsho/toggleterm.nvim") -- Embedded terminal
 	use("nvim-lualine/lualine.nvim") -- Status bar
