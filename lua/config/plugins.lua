@@ -67,6 +67,7 @@ return packer.startup(function()
 	use("ray-x/lsp_signature.nvim") -- Lsp signature
 	use("neovim/nvim-lspconfig") -- lsp config
 	use("lvimuser/lsp-inlayhints.nvim") -- lsp inlay hints
+  use("j-hui/fidget.nvim") -- lsp progress bar
 	use("mfussenegger/nvim-lint") -- linting
 
 	use("L3MON4D3/LuaSnip") -- LuaSnip with neovim
