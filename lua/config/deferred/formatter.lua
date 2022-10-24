@@ -25,6 +25,9 @@ formatter.setup({
 		typescriptreact = {
 			require("formatter.filetypes.typescript").prettier,
 		},
+		rust = {
+			require("formatter.filetypes.rust").rustfmt,
+		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
 		},
