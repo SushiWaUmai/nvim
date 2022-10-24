@@ -52,3 +52,6 @@ keymap("n", "<A-Up>", ":resize -2<CR>", opts)
 keymap("n", "<A-Down>", ":resize +2<CR>", opts)
 keymap("n", "<A-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<A-Right>", ":vertical resize +2<CR>", opts)
+
+-- Delete a word using control backspace
+keymap("i", "<C-H>", "<C-W>", opts)
