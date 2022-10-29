@@ -82,6 +82,8 @@ return packer.startup(function()
 
 	use("mhartington/formatter.nvim") -- formatter
 
+  use("saecki/crates.nvim") -- rust cargo crates management
+
 	-- Telescope
 	use("nvim-telescope/telescope.nvim") -- telescope
 	use("nvim-telescope/telescope-ui-select.nvim") -- telescope UI

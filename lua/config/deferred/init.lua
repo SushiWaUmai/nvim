@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 			require("config.deferred.treesitter")
 			require("config.deferred.copilot")
 			require("config.deferred.telescope")
+			require("config.deferred.crates")
 			require("config.deferred.gitsigns")
 		end, 100)
 	end,
