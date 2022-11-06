@@ -21,10 +21,8 @@ configs.setup({
 		extended_mode = true,
 		max_file_lines = nil,
 		colors = {
-			"#BF616A",
 			"#D08770",
 			"#EBCB8B",
-			"#A3BE8C",
 			"#B48EAD",
 		},
 	},
