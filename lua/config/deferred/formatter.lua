@@ -14,16 +14,22 @@ formatter.setup({
 			require("formatter.defaults.clangformat"),
 		},
 		javascript = {
-			require("formatter.filetypes.typescript").prettier,
+			require("formatter.defaults.prettier"),
 		},
 		javascriptreact = {
-			require("formatter.filetypes.typescript").prettier,
+			require("formatter.defaults.prettier"),
 		},
 		typescript = {
-			require("formatter.filetypes.typescript").prettier,
+			require("formatter.defaults.prettier"),
 		},
 		typescriptreact = {
-			require("formatter.filetypes.typescript").prettier,
+			require("formatter.defaults.prettier"),
+		},
+		html = {
+			require("formatter.defaults.prettier"),
+		},
+		json = {
+			require("formatter.defaults.prettier"),
 		},
 		rust = {
 			require("formatter.filetypes.rust").rustfmt,
