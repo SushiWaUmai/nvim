@@ -11,7 +11,13 @@ formatter.setup({
 			require("formatter.filetypes.lua").stylua,
 		},
 		java = {
-			require("formatter.defaults.clangformat"),
+			function()
+				return {
+					exe = "google-java-format",
+					args = { "-a -" },
+					stdin = true,
+				}
+			end,
 		},
 		javascript = {
 			require("formatter.defaults.prettier"),
