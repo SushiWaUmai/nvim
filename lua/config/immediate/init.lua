@@ -13,6 +13,7 @@ require("config.immediate.colorizer")
 require("config.immediate.numb")
 
 -- Visual
+require("config.immediate.notify")
 require("config.immediate.theme")
 require("config.immediate.lualine")
 require("config.immediate.illuminate")

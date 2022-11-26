@@ -3,10 +3,11 @@ if not status_ok then
 	return
 end
 
+local stages = require("config.immediate.notify.stages")
 local icons = require("config.icons")
 
 notify.setup({
-	stages = "fade_in_slide_out",
+	stages = stages,
 	on_open = nil,
 	on_close = nil,
 	render = "default",
