@@ -15,6 +15,8 @@ keymap(
 	opts
 )
 
+keymap("n", "<C-f>", "<cmd>Telescope live_grep<cr>", opts)
+
 return {
 	defaults = {
 		i = {
