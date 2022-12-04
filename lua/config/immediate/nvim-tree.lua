@@ -8,6 +8,8 @@ if not config_status_ok then
 	return
 end
 
+local keymaps = require("config.immediate.keymap.nvim-tree")
+
 local icons = require("config.icons")
 
 local tree_cb = nvim_tree_config.nvim_tree_callback
@@ -75,7 +77,7 @@ nvim_tree.setup({
 		mappings = {
 			custom_only = false,
 			list = { {
-				key = { "l", "<CR>", "o" },
+				key = keymaps,
 				cb = tree_cb("edit"),
 			} },
 		},
