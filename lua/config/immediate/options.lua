@@ -23,7 +23,9 @@ local options = {
 	expandtab = true,
 	cursorline = true,
 	number = true,
-	relativenumber = false,
+	relativenumber = true,
+  shiftwidth = 2,
+  tabstop = 2,
 	signcolumn = "yes",
 	wrap = false,
 	guifont = "monospace:h17",
@@ -36,6 +38,3 @@ end
 vim.opt.shortmess:append("c")
 
 vim.cmd([[set iskeyword+=-]])
-
-vim.cmd([[set shiftwidth=2]])
-vim.cmd([[set tabstop=2]])
