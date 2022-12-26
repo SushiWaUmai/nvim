@@ -38,7 +38,14 @@ formatter.setup({
 			require("formatter.defaults.prettier"),
 		},
 		rust = {
-			require("formatter.filetypes.rust").rustfmt,
+			function()
+				return {
+					exe = "rustfmt",
+					args = { "--edition 2021" },
+					stdin = true,
+				}
+			end,
+			-- require("formatter.filetypes.rust").rustfmt, -- This does not implement rustfmt with async fn
 		},
 		["*"] = {
 			require("formatter.filetypes.any").remove_trailing_whitespace,
