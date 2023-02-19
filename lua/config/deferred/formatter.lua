@@ -37,6 +37,9 @@ formatter.setup({
 		json = {
 			require("formatter.defaults.prettier"),
 		},
+		go = {
+			require("formatter.filetypes.go").gofmt,
+		},
 		rust = {
 			function()
 				return {
