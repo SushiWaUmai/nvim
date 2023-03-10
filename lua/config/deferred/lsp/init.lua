@@ -61,7 +61,7 @@ lsp_inlayhints.setup({
 })
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-for _, server in pairs(mason_lspconfig.get_installed_servers()) do
+local function setup_language_server(server)
 	local opts = {
 		on_attach = function(client, bufnr)
 			lsp_keymap.on_attach(bufnr)
@@ -69,6 +69,18 @@ for _, server in pairs(mason_lspconfig.get_installed_servers()) do
 				navic.attach(client, bufnr)
 			end
 			lsp_inlayhints.on_attach(client, bufnr)
+
+      -- TODO: Move this godot specific stuff to godot config file
+      vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+			local _notify = client.notify
+
+			client.notify = function(method, params)
+				if method == "textDocument/didClose" then
+					-- Godot doesn't implement didClose yet
+					return
+				end
+				_notify(method, params)
+			end
 		end,
 		flags = {
 			debounce_text_changes = 150,
@@ -84,5 +96,11 @@ for _, server in pairs(mason_lspconfig.get_installed_servers()) do
 
 	lspconfig[server].setup(opts)
 end
+
+for _, server in pairs(mason_lspconfig.get_installed_servers()) do
+	setup_language_server(server)
+end
+
+setup_language_server("gdscript")
 
 lsp_sig.setup_signature()

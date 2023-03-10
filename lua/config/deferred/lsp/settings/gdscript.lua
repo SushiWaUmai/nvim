@@ -4,6 +4,6 @@ if not lspconfig_status_ok then
 end
 
 return {
-	root_dir = lspconfig.util.root_pattern("package.json"),
-	single_file_support = false,
+	file_types = { "gd", "gdscript", "gdscript3" },
+	root_dir = lspconfig.util.root_pattern("project.godot", ".git"),
 }

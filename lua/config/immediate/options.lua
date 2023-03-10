@@ -24,8 +24,8 @@ local options = {
 	cursorline = true,
 	number = true,
 	relativenumber = true,
-  shiftwidth = 2,
-  tabstop = 2,
+	shiftwidth = 2,
+	tabstop = 2,
 	signcolumn = "yes",
 	wrap = false,
 	guifont = "monospace:h17",
@@ -36,5 +36,6 @@ for k, v in pairs(options) do
 end
 
 vim.opt.shortmess:append("c")
-
 vim.cmd([[set iskeyword+=-]])
+vim.cmd([[set autoindent]])
+vim.cmd([[set noexpandtab]])
