@@ -40,6 +40,9 @@ formatter.setup({
 		go = {
 			require("formatter.filetypes.go").gofmt,
 		},
+		python = {
+			require("formatter.filetypes.python").autopep8,
+		},
 		rust = {
 			function()
 				return {
