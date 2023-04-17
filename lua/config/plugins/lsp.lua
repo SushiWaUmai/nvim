@@ -21,5 +21,6 @@ return {
 	"mfussenegger/nvim-dap",            -- dap
 	"rcarriga/nvim-dap-ui",             -- dap-ui
 
+	"github/copilot.vim",                 -- github copilot
 	"saecki/crates.nvim",               -- rust cargo crates management
 }
