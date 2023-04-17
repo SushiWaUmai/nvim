@@ -80,8 +80,6 @@ return packer.startup(function()
 	use("mfussenegger/nvim-dap") -- dap
 	use("rcarriga/nvim-dap-ui") -- dap-ui
 
-	use("mhartington/formatter.nvim") -- formatter
-
   use("saecki/crates.nvim") -- rust cargo crates management
   use("nvim-pack/nvim-spectre") -- search panel
 
