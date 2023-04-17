@@ -6,7 +6,7 @@ end
 
 local options = {
 	indentLine_enabled = 1,
-	char = "▏",
+	char = "|",
 	filetype_exclude = {
 		"help",
 		"terminal",
