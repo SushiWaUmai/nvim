@@ -13,7 +13,4 @@ return {
 	"windwp/nvim-autopairs", -- autopairs eg: ( ) { }
 
 	"b0o/SchemaStore.nvim", -- json schemas
-
-	-- Icons
-	{ "kyazdani42/nvim-web-devicons", lazy = true },
 }
