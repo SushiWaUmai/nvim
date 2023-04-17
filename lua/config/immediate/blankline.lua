@@ -11,7 +11,6 @@ local options = {
 		"help",
 		"terminal",
 		"alpha",
-		"packer",
 		"lspinfo",
 		"TelescopePrompt",
 		"TelescopeResults",

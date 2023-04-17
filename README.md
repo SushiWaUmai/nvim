@@ -14,7 +14,7 @@ git clone https://github.com/SushiWaUmai/nvim.git %localappdata%/nvim
 
 Use Alpha or 
 ```vim
-:PackerSync
+:Lazy
 ```
 
 to install all plugins.

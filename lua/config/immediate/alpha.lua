@@ -21,7 +21,7 @@ dashboard.section.buttons.val = {
 	dashboard.button("t", "Find text", ":Telescope live_grep <CR>"),
 	dashboard.button("b", "Browse Folder", ":NvimTreeToggle<CR>"),
 	dashboard.button("c", "Config", ":e " .. fn.stdpath("config") .. "/init.lua <CR>"),
-	dashboard.button("p", "Update Packages", ":PackerSync <CR>"),
+	dashboard.button("p", "Update Packages", ":Lazy <CR>"),
 	dashboard.button("h", "Check Health", ":checkhealth <CR>"),
 	dashboard.button("q", "Quit", ":qa<CR>"),
 }

@@ -1,108 +1,94 @@
 local fn = vim.fn
 
-local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
-if fn.empty(fn.glob(install_path)) > 0 then
-	PACKER_BOOTSTRAP = fn.system({
+local lazypath = fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+	vim.fn.system({
 		"git",
 		"clone",
-		"--depth",
-		"1",
-		"https://github.com/wbthomason/packer.nvim",
-		install_path,
+		"--filter=blob:none",
+		"https://github.com/folke/lazy.nvim.git",
+		"--branch=stable", -- latest stable release
+		lazypath,
 	})
-	print("Installing packer close and reopen Neovim...")
-	vim.cmd("packadd packer.nvim")
 end
+vim.opt.rtp:prepend(lazypath)
 
-local status_ok, packer = pcall(require, "packer")
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+local status_ok, lazy = pcall(require, "lazy")
 if not status_ok then
 	return
 end
 
-packer.init({
-	display = {
-		open_fn = function()
-			return require("packer.util").float({
-				border = "rounded",
-			})
-		end,
-	},
-})
+return lazy.setup({
+	"kyazdani42/nvim-web-devicons",               -- Icons
 
-return packer.startup(function()
-	use("wbthomason/packer.nvim") -- Package Manager
+	"nvim-lua/plenary.nvim",                      -- Useful lua functions used in lots of plugins
+	"nvim-lua/popup.nvim",                        -- An implementation of the Popup API from vim in Neovim
+	"kyazdani42/nvim-tree.lua",                   -- File Explorer
+	"goolord/alpha-nvim",                         -- Start Menu
+	"akinsho/bufferline.nvim",                    -- Tabs
+	"moll/vim-bbye",                              -- Closing Tabs
+	"rcarriga/nvim-notify",                       -- Notify
+	"ellisonleao/glow.nvim",                      -- Markdown preview
+	"norcalli/nvim-colorizer.lua",                -- Hex Colorizer
+	"nacro90/numb.nvim",                          -- peek lines
 
-	use("kyazdani42/nvim-web-devicons") -- Icons
+	"nvim-treesitter/nvim-treesitter",            -- Better Syntax Highlighting
+	"nvim-treesitter/nvim-treesitter-context",    -- Treesitter context utility
+	"p00f/nvim-ts-rainbow",                       -- rainbow parenthesis
+	"JoosepAlviste/nvim-ts-context-commentstring", -- Contextual Commenting
+	"windwp/nvim-ts-autotag",                     -- autoclose or rename html tags
+	"rrethy/vim-illuminate",                      -- Highlighting of other uses
 
-	use("nvim-lua/plenary.nvim") -- Useful lua functions used in lots of plugins
-	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
-	use("kyazdani42/nvim-tree.lua") -- File Explorer
-	use("goolord/alpha-nvim") -- Start Menu
-	use("akinsho/bufferline.nvim") -- Tabs
-	use("moll/vim-bbye") -- Closing Tabs
-	use("rcarriga/nvim-notify") -- Notify
-	use("ellisonleao/glow.nvim") -- Markdown preview
-	use("norcalli/nvim-colorizer.lua") -- Hex Colorizer
-	use("nacro90/numb.nvim") -- peek lines
+	"akinsho/toggleterm.nvim",                    -- Embedded terminal
+	"nvim-lualine/lualine.nvim",                  -- Status bar
+	"lukas-reineke/indent-blankline.nvim",        -- Indentation
+	"numToStr/Comment.nvim",                      -- Commenting
+	"lewis6991/gitsigns.nvim",                    -- Git Signs
 
-	use("nvim-treesitter/nvim-treesitter") -- Better Syntax Highlighting
-	use("nvim-treesitter/nvim-treesitter-context") -- Treesitter context utility
-	use("p00f/nvim-ts-rainbow") -- rainbow parenthesis
-	use("JoosepAlviste/nvim-ts-context-commentstring") -- Contextual Commenting
-	use("windwp/nvim-ts-autotag") -- autoclose or rename html tags
-	use("rrethy/vim-illuminate") -- Highlighting of other uses
+	"SmiteshP/nvim-navic",                        -- lsp status line
+	"hrsh7th/cmp-nvim-lsp",                       -- lsp with cmp
+	"hrsh7th/cmp-buffer",                         -- cmp with bufferline
+	"hrsh7th/cmp-path",                           -- cmp with path
+	"hrsh7th/cmp-cmdline",                        -- cmp in terminal
+	"hrsh7th/nvim-cmp",                           -- cmp
+	"williamboman/mason.nvim",                    -- lsp installer
+	"williamboman/mason-lspconfig.nvim",          -- mason lsp config
+	"onsails/lspkind-nvim",                       -- lspkind
+	"nvim-lua/lsp-status.nvim",                   -- lsp status
+	"ray-x/lsp_signature.nvim",                   -- Lsp signature
+	"neovim/nvim-lspconfig",                      -- lsp config
+	"lvimuser/lsp-inlayhints.nvim",               -- lsp inlay hints
+	"j-hui/fidget.nvim",                          -- lsp progress bar
+	"mfussenegger/nvim-lint",                     -- linting
 
-	use("akinsho/toggleterm.nvim") -- Embedded terminal
-	use("nvim-lualine/lualine.nvim") -- Status bar
-	use("lukas-reineke/indent-blankline.nvim") -- Indentation
-	use("numToStr/Comment.nvim") -- Commenting
-	use("lewis6991/gitsigns.nvim") -- Git Signs
+	"L3MON4D3/LuaSnip",                           -- LuaSnip with neovim
+	"saadparwaiz1/cmp_luasnip",                   -- LuaSnip with cmp
 
-	use("SmiteshP/nvim-navic") -- lsp status line
-	use("hrsh7th/cmp-nvim-lsp") -- lsp with cmp
-	use("hrsh7th/cmp-buffer") -- cmp with bufferline
-	use("hrsh7th/cmp-path") -- cmp with path
-	use("hrsh7th/cmp-cmdline") -- cmp in terminal
-	use("hrsh7th/nvim-cmp") -- cmp
-	use("williamboman/mason.nvim") -- lsp installer
-	use("williamboman/mason-lspconfig.nvim") -- mason lsp config
-	use("onsails/lspkind-nvim") -- lspkind
-	use("nvim-lua/lsp-status.nvim") -- lsp status
-	use("ray-x/lsp_signature.nvim") -- Lsp signature
-	use("neovim/nvim-lspconfig") -- lsp config
-	use("lvimuser/lsp-inlayhints.nvim") -- lsp inlay hints
-	use("j-hui/fidget.nvim") -- lsp progress bar
-	use("mfussenegger/nvim-lint") -- linting
+	"mfussenegger/nvim-dap",                      -- dap
+	"rcarriga/nvim-dap-ui",                       -- dap-ui
 
-	use("L3MON4D3/LuaSnip") -- LuaSnip with neovim
-	use("saadparwaiz1/cmp_luasnip") -- LuaSnip with cmp
-
-	use("mfussenegger/nvim-dap") -- dap
-	use("rcarriga/nvim-dap-ui") -- dap-ui
-
-  use("saecki/crates.nvim") -- rust cargo crates management
+	"saecki/crates.nvim",                         -- rust cargo crates management
 
 	-- Telescope
-	use("nvim-telescope/telescope.nvim") -- telescope
-	use("nvim-telescope/telescope-ui-select.nvim") -- telescope UI
-	use("nvim-telescope/telescope-file-browser.nvim") -- File Browser
-	use("nvim-telescope/telescope-media-files.nvim") -- displays media files (png, jpeg, etc) [Only works on linux]
+	"nvim-telescope/telescope.nvim",             -- telescope
+	"nvim-telescope/telescope-ui-select.nvim",   -- telescope UI
+	"nvim-telescope/telescope-file-browser.nvim", -- File Browser
+	"nvim-telescope/telescope-media-files.nvim", -- displays media files (png, jpeg, etc) [Only works on linux]
 
-	use("b0o/SchemaStore.nvim") -- json schemas
-	use("windwp/nvim-autopairs") -- autopairs eg: ( ) { }
-	use("github/copilot.vim") -- github copilot
+	"b0o/SchemaStore.nvim",                      -- json schemas
+	"windwp/nvim-autopairs",                     -- autopairs eg: ( ) { }
+	"github/copilot.vim",                        -- github copilot
 
-	use("wakatime/vim-wakatime") -- Time Tracking
+	"wakatime/vim-wakatime",                     -- Time Tracking
 
-	use("xiyaowong/nvim-transparent") -- transparent
+	"xiyaowong/nvim-transparent",                -- transparent
 
 	-- Color Scheme
-	use("Mofiqul/vscode.nvim") -- vscode color theme
-	use("olimorris/onedarkpro.nvim") -- onedarkpro color theme
-	use("cocopon/iceberg.vim") -- iceberg color theme
-	use("nordtheme/vim") -- nord color theme
-
-	if PACKER_BOOTSTRAP then
-		packer.sync()
-	end
-end)
+	"Mofiqul/vscode.nvim",      -- vscode color theme
+	"olimorris/onedarkpro.nvim", -- onedarkpro color theme
+	"cocopon/iceberg.vim",      -- iceberg color theme
+	"nordtheme/vim",            -- nord color theme
+})

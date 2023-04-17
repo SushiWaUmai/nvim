@@ -8,7 +8,6 @@ illuminate.configure({
   filetypes_denylist = {
     "NvimTree",
     "alpha",
-    "packer",
     "toggleterm",
     "TelescopePrompt",
   },
