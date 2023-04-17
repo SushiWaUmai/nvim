@@ -4,6 +4,9 @@ return {
 			diagnostics = {
 				globals = { "vim", "use" },
 			},
+			telemetry = {
+				enable = false,
+			},
 		},
 	},
 }
