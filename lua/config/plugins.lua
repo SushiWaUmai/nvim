@@ -81,7 +81,6 @@ return packer.startup(function()
 	use("rcarriga/nvim-dap-ui") -- dap-ui
 
   use("saecki/crates.nvim") -- rust cargo crates management
-  use("nvim-pack/nvim-spectre") -- search panel
 
 	-- Telescope
 	use("nvim-telescope/telescope.nvim") -- telescope
