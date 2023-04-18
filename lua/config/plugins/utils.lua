@@ -25,7 +25,6 @@ local plugins = {
 	"ellisonleao/glow.nvim", -- Markdown preview
 	"moll/vim-bbye",        -- Closing Tabs
 	"wakatime/vim-wakatime", -- Time Tracking
-	"b0o/SchemaStore.nvim", -- json schemas
 }
 
 

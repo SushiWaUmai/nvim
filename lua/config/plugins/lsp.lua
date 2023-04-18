@@ -51,6 +51,7 @@ local plugins = {
 			"williamboman/mason-lspconfig.nvim",
 			"SmiteshP/nvim-navic",
 			"lvimuser/lsp-inlayhints.nvim",
+			"b0o/SchemaStore.nvim",
 		}
 	},
 	-- Lsp signature
@@ -72,8 +73,14 @@ local plugins = {
 			"saadparwaiz1/cmp_luasnip", -- LuaSnip with cmp
 		}
 	},
-	"L3MON4D3/LuaSnip",    -- LuaSnip with neovim
-	"onsails/lspkind-nvim", -- lspkind
+	"hrsh7th/cmp-nvim-lsp",    -- lsp with cmp
+	"hrsh7th/cmp-buffer",      -- cmp with bufferline
+	"hrsh7th/cmp-path",        -- cmp with path
+	"hrsh7th/cmp-cmdline",     -- cmp in terminal
+	"saadparwaiz1/cmp_luasnip", -- LuaSnip with cmp
+	"L3MON4D3/LuaSnip",        -- LuaSnip with neovim
+	"onsails/lspkind-nvim",    -- lspkind
+	"b0o/SchemaStore.nvim",    -- json schemas
 }
 
 return require("config.utils").extendPlugins(plugins, "config.options.lsp")
