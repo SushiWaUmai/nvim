@@ -57,6 +57,13 @@ return {
 			event = { "BufReadPre", "BufNewFile" },
 		}),
 
+	-- Hex Colorizer
+	vim.tbl_deep_extend("force", require("config.options.ui.colorizer"),
+		{
+			"norcalli/nvim-colorizer.lua",
+			event = { "BufReadPre", "BufNewFile" },
+		}),
+
 	-- Icons
 	{ "kyazdani42/nvim-web-devicons", lazy = true },
 
