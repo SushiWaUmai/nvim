@@ -1,8 +1,33 @@
 return {
-	"kyazdani42/nvim-tree.lua", -- File Explorer
-	"goolord/alpha-nvim",       -- Start Menu
-	"akinsho/bufferline.nvim",  -- Tabs
-	"nvim-lualine/lualine.nvim", -- Status bar
+	-- Start Menu
+	vim.tbl_deep_extend("force", require("config.options.ui.alpha"),
+		{
+			"goolord/alpha-nvim",
+			event = "VimEnter",
+		}
+	),
+
+	-- Tabs
+	vim.tbl_deep_extend("force", require("config.options.ui.bufferline"),
+		{
+			"akinsho/bufferline.nvim",
+			lazy = false,
+		}),
+
+	-- File Explorer
+	vim.tbl_deep_extend("force", require("config.options.ui.nvim-tree"),
+		{
+			"kyazdani42/nvim-tree.lua",
+			lazy = false
+		}
+	),
+
+	-- Status bar
+	vim.tbl_deep_extend("force", require("config.options.ui.lualine"),
+		{
+			"nvim-lualine/lualine.nvim",
+			lazy = false,
+		}),
 
 	-- Embedded terminal
 	vim.tbl_deep_extend("force", require("config.options.ui.toggleterm"),
@@ -28,7 +53,7 @@ return {
 	vim.tbl_deep_extend("force", require("config.options.ui.indentscope"),
 		{
 			"echasnovski/mini.indentscope",
-			version = false, -- wait till new 0.7.0 release to put it back on semver
+			version = false,
 			event = { "BufReadPre", "BufNewFile" },
 		}),
 
