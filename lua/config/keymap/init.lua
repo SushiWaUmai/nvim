@@ -1,0 +1,8 @@
+require("config.keymap.basic")
+require("config.keymap.comment")
+require("config.keymap.gitsigns")
+require("config.keymap.dap")
+require("config.keymap.lsp")
+require("config.keymap.toggleterm")
+require("config.keymap.utils")
+-- require("config.keymap.copilot")

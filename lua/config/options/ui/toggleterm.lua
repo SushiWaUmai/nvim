@@ -1,7 +1,7 @@
 return {
 	opts = {
 		size = 20,
-		open_mapping = require("config.immediate.keymap.toggleterm").open_mapping,
+		open_mapping = require("config.keymap.toggleterm").open_mapping,
 		hide_numbers = true,
 		shade_filetypes = {},
 		shade_terminals = true,

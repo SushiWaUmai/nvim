@@ -1,6 +1,6 @@
 local plugins = {
 	-- telescope
-	telescope = {
+	config = {
 		"nvim-telescope/telescope.nvim",
 		lazy = false,
 	},

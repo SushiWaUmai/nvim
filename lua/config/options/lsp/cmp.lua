@@ -1,7 +1,7 @@
 return {
 	config = function()
 		local cmp = require("cmp")
-		local cmp_keymap = require("config.immediate.keymap.cmp")
+		local cmp_keymap = require("config.keymap")
 		local cmp_lsp = require("cmp_nvim_lsp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")

@@ -1,1 +1,0 @@
-require("config.immediate.keymap")
