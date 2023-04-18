@@ -1,5 +1,5 @@
 # My Nvim Config
-This repo is inspired by [ChristianChiarulli's nvim config](https://github.com/ChristianChiarulli/nvim)
+This repo is inspired by [ChristianChiarulli's nvim config](https://github.com/ChristianChiarulli/nvim) and [LazyVim](https://github.com/LazyVim/LazyVim/)
 
 ## Getting Started
 
