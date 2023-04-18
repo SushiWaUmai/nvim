@@ -29,6 +29,7 @@ local options = {
 	signcolumn = "yes",
 	wrap = false,
 	guifont = "MesloLGS Nerd Font Mono:h12",
+	confirm = true,
 }
 
 for k, v in pairs(options) do
