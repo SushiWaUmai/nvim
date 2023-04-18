@@ -29,7 +29,6 @@ nvim_tree.setup({
 			error = icons.diagnostics.Error,
 		},
 	},
-
 	renderer = {
 		icons = {
 			glyphs = {
@@ -54,19 +53,16 @@ nvim_tree.setup({
 			},
 		},
 	},
-
 	update_focused_file = {
 		enable = true,
 		update_cwd = true,
 		ignore_list = {},
 	},
-
 	git = {
 		enable = true,
 		ignore = true,
 		timeout = 500,
 	},
-
 	view = {
 		width = 30,
 		hide_root_folder = false,
@@ -74,15 +70,10 @@ nvim_tree.setup({
 		preserve_window_proportions = false,
 		mappings = {
 			custom_only = false,
-			list = { {
-				key = keymaps,
-				cb = tree_cb("edit"),
-			} },
 		},
 		number = false,
 		relativenumber = false,
 	},
-
 	actions = {
 		open_file = {
 			resize_window = true,

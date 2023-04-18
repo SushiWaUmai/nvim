@@ -3,7 +3,6 @@ require("config.immediate.options")
 
 require("config.immediate.nvim-tree")
 require("config.immediate.bufferline")
-require("config.immediate.toggleterm")
 require("config.immediate.autopairs")
 require("config.immediate.cmp")
 require("config.immediate.alpha")
