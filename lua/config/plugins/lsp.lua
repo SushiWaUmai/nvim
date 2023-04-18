@@ -48,11 +48,14 @@ local plugins = {
 		"ray-x/lsp_signature.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	-- cmp
+	cmp = {
+		"hrsh7th/nvim-cmp",
+	},
 	"hrsh7th/cmp-nvim-lsp",    -- lsp with cmp
 	"hrsh7th/cmp-buffer",      -- cmp with bufferline
 	"hrsh7th/cmp-path",        -- cmp with path
 	"hrsh7th/cmp-cmdline",     -- cmp in terminal
-	"hrsh7th/nvim-cmp",        -- cmp
 	"onsails/lspkind-nvim",    -- lspkind
 	"L3MON4D3/LuaSnip",        -- LuaSnip with neovim
 	"saadparwaiz1/cmp_luasnip", -- LuaSnip with cmp

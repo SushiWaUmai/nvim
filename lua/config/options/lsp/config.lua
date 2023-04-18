@@ -46,7 +46,7 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		local lspconfig = require("lspconfig")
 		local lsp_keymap = require("config.immediate.keymap.lsp")
-		local cmp_capabilities = require("config.immediate.cmp")
+		local cmp_capabilities = require("config.options.lsp.cmp")
 		local lsp_inlayhints = require("lsp-inlayhints")
 		local navic = require("nvim-navic")
 
