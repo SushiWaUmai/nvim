@@ -17,7 +17,7 @@ local plugins = {
 	-- Status bar
 	lualine = {
 		"nvim-lualine/lualine.nvim",
-		event = { "BufReadPost", "BufNewFile" },
+		event = "VimEnter",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
 			"nvim-lualine/lualine.nvim",
