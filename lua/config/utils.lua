@@ -5,7 +5,7 @@ return {
 			if type(key) == "string" then
 				local status_ok, config = pcall(require, options .. "." .. key)
 				if not status_ok then
-					print("Could not import " .. options .. "." .. key)
+					vim.notify("Could not import " .. options .. "." .. key, "error")
 					break
 				end
 

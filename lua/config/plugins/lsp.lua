@@ -16,32 +16,46 @@ local plugins = {
 	-- linting
 	lint = {
 		"mfussenegger/nvim-lint",
-		lazy = true
+		event = { "BufReadPre", "BufNewFile" },
 	},
 	-- rust cargo crates management
 	crates = {
 		"saecki/crates.nvim",
-		lazy = true
+		event = { "BufReadPre", "BufNewFile" },
 	},
 	-- lsp status
 	status = {
 		"nvim-lua/lsp-status.nvim",
-		lazy = true
+		event = { "BufReadPre", "BufNewFile" },
 	},
-	"hrsh7th/cmp-nvim-lsp",             -- lsp with cmp
-	"hrsh7th/cmp-buffer",               -- cmp with bufferline
-	"hrsh7th/cmp-path",                 -- cmp with path
-	"hrsh7th/cmp-cmdline",              -- cmp in terminal
-	"hrsh7th/nvim-cmp",                 -- cmp
-	"williamboman/mason-lspconfig.nvim", -- mason lsp config
-	"onsails/lspkind-nvim",             -- lspkind
-	"ray-x/lsp_signature.nvim",         -- Lsp signature
-	"neovim/nvim-lspconfig",            -- lsp config
-	"lvimuser/lsp-inlayhints.nvim",     -- lsp inlay hints
-	"L3MON4D3/LuaSnip",                 -- LuaSnip with neovim
-	"saadparwaiz1/cmp_luasnip",         -- LuaSnip with cmp
-	"mfussenegger/nvim-dap",            -- dap
-	"rcarriga/nvim-dap-ui",             -- dap-ui
+	-- mason lsp config
+	masonlspconfig = {
+		"williamboman/mason-lspconfig.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
+	-- lsp inlay hints
+	inlayhints = {
+		"lvimuser/lsp-inlayhints.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
+	-- lsp config
+	config = {
+		"neovim/nvim-lspconfig",
+		event = { "BufReadPre", "BufNewFile" },
+	},
+	-- Lsp signature
+	signature = {
+		"ray-x/lsp_signature.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
+	"hrsh7th/cmp-nvim-lsp",    -- lsp with cmp
+	"hrsh7th/cmp-buffer",      -- cmp with bufferline
+	"hrsh7th/cmp-path",        -- cmp with path
+	"hrsh7th/cmp-cmdline",     -- cmp in terminal
+	"hrsh7th/nvim-cmp",        -- cmp
+	"onsails/lspkind-nvim",    -- lspkind
+	"L3MON4D3/LuaSnip",        -- LuaSnip with neovim
+	"saadparwaiz1/cmp_luasnip", -- LuaSnip with cmp
 }
 
 return require("config.utils").extendPlugins(plugins, "config.options.lsp")
