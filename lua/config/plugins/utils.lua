@@ -25,10 +25,14 @@ local plugins = {
 		"github/copilot.vim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	-- Markdown Preview
+	markdown = {
+		"iamcco/markdown-preview.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
 	"nvim-lua/plenary.nvim",     -- Useful lua functions used in lots of plugins
 	"nvim-lua/popup.nvim",       -- An implementation of the Popup API from vim in Neovim
-	"ellisonleao/glow.nvim",     -- Markdown preview
-	"gpanders/editorconfig.nvim", -- editor config
+	"gpanders/editorconfig.nvim", -- Editor config
 	"moll/vim-bbye",             -- Closing Tabs
 	"wakatime/vim-wakatime",     -- Time Tracking
 }
