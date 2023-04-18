@@ -46,8 +46,11 @@ return {
 		local mason_lspconfig = require("mason-lspconfig")
 		local lspconfig = require("lspconfig")
 		local lsp_keymap = require("config.keymap.lsp")
-		local cmp_capabilities = require("config.options.lsp.cmp")
+		-- Setup lspconfig.
+		local cmp_lsp = require("cmp_nvim_lsp")
 		local lsp_inlayhints = require("lsp-inlayhints")
+
+		local cmp_capabilities = cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 		-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 		local function setup_language_server(server)
@@ -78,7 +81,7 @@ return {
 				opts = vim.tbl_deep_extend("force", lang_opts, opts)
 			end
 
-			opts = vim.tbl_deep_extend("force", cmp_capabilities, opts)
+			opts = vim.tbl_deep_extend("force", { capabilities = cmp_capabilities }, opts)
 
 			lspconfig[server].setup(opts)
 		end

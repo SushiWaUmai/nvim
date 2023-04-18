@@ -2,7 +2,6 @@ return {
 	config = function()
 		local cmp = require("cmp")
 		local cmp_keymap = require("config.keymap.cmp")
-		local cmp_lsp = require("cmp_nvim_lsp")
 		local luasnip = require("luasnip")
 		local lspkind = require("lspkind")
 
@@ -50,9 +49,5 @@ return {
 				{ name = "path" },
 			}),
 		})
-
-		-- Setup lspconfig.
-		local capabilities = cmp_lsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
-		return capabilities
 	end
 }
