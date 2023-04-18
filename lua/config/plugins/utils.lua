@@ -20,6 +20,11 @@ local plugins = {
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	-- github copilot
+	copilot = {
+		"github/copilot.vim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
 	"nvim-lua/plenary.nvim",     -- Useful lua functions used in lots of plugins
 	"nvim-lua/popup.nvim",       -- An implementation of the Popup API from vim in Neovim
 	"ellisonleao/glow.nvim",     -- Markdown preview
