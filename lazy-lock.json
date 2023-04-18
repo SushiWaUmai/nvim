@@ -56,9 +56,11 @@
   "telescope.nvim": { "branch": "master", "commit": "6258d50b09f9ae087317e392efe7c05a7323492d" },
   "toggleterm.nvim": { "branch": "main", "commit": "1c5996ee3c30b54751093fe68d40676859e7778f" },
   "trouble.nvim": { "branch": "main", "commit": "d56bfc0c501ced4002a57cb60433362fb2ce9c4d" },
+  "twilight.nvim": { "branch": "main", "commit": "2e13bd1886562b737f38c418ed542677b41ef5cb" },
   "vim": { "branch": "main", "commit": "f725ac643afce04021c9abcbb57711fcb9fa71e9" },
   "vim-bbye": { "branch": "master", "commit": "25ef93ac5a87526111f43e5110675032dbcacf56" },
   "vim-illuminate": { "branch": "master", "commit": "a2907275a6899c570d16e95b9db5fd921c167502" },
   "vim-wakatime": { "branch": "master", "commit": "515dbcc2278a9279a19de838fa29fc5078e34e56" },
-  "vscode.nvim": { "branch": "main", "commit": "dc5f37603ada51db13bc4009cbee628c5857a274" }
+  "vscode.nvim": { "branch": "main", "commit": "dc5f37603ada51db13bc4009cbee628c5857a274" },
+  "zen-mode.nvim": { "branch": "main", "commit": "6e6c963d70a8e47854fa656987666bfb863f9c4e" }
 }

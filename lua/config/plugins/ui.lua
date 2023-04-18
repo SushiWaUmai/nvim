@@ -47,6 +47,17 @@ local plugins = {
 		"norcalli/nvim-colorizer.lua",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	twilight = {
+		"folke/twilight.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+	},
+	zenmode = {
+		"folke/zen-mode.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"folke/twilight.nvim",
+		}
+	},
 	-- Icons
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	-- ui components
