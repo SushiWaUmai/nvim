@@ -44,13 +44,4 @@ local plugins = {
 	"rcarriga/nvim-dap-ui",             -- dap-ui
 }
 
-local result = {}
-for key, value in pairs(plugins) do
-	if type(key) == "string" then
-		table.insert(result, vim.tbl_deep_extend("force", require("config.options.lsp." .. key), value))
-	else
-		table.insert(result, value)
-	end
-end
-
-return result
+return require("config.utils").extendPlugins(plugins, "config.options.lsp")

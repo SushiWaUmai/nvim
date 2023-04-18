@@ -28,13 +28,5 @@ local plugins = {
 	"b0o/SchemaStore.nvim", -- json schemas
 }
 
-local result = {}
-for key, value in pairs(plugins) do
-	if type(key) == "string" then
-		table.insert(result, vim.tbl_deep_extend("force", require("config.options.utils." .. key), value))
-	else
-		table.insert(result, value)
-	end
-end
 
-return result
+return require("config.utils").extendPlugins(plugins, "config.options.utils")
