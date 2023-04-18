@@ -20,11 +20,12 @@ local plugins = {
 		"lewis6991/gitsigns.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
-	"nvim-lua/plenary.nvim", -- Useful lua functions used in lots of plugins
-	"nvim-lua/popup.nvim",  -- An implementation of the Popup API from vim in Neovim
-	"ellisonleao/glow.nvim", -- Markdown preview
-	"moll/vim-bbye",        -- Closing Tabs
-	"wakatime/vim-wakatime", -- Time Tracking
+	"nvim-lua/plenary.nvim",     -- Useful lua functions used in lots of plugins
+	"nvim-lua/popup.nvim",       -- An implementation of the Popup API from vim in Neovim
+	"ellisonleao/glow.nvim",     -- Markdown preview
+	"gpanders/editorconfig.nvim", -- editor config
+	"moll/vim-bbye",             -- Closing Tabs
+	"wakatime/vim-wakatime",     -- Time Tracking
 }
 
 
