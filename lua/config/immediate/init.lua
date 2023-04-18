@@ -9,5 +9,4 @@ require("config.immediate.numb")
 
 -- Visual
 require("config.immediate.notify")
-require("config.immediate.theme")
 require("config.immediate.illuminate")

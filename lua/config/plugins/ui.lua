@@ -18,7 +18,7 @@ return {
 	vim.tbl_deep_extend("force", require("config.options.ui.nvim-tree"),
 		{
 			"kyazdani42/nvim-tree.lua",
-			lazy = false
+			lazy = false,
 		}
 	),
 
@@ -33,7 +33,7 @@ return {
 	vim.tbl_deep_extend("force", require("config.options.ui.toggleterm"),
 		{
 			"akinsho/toggleterm.nvim",
-			event = { "BufReadPre", "BufNewFile" },
+			event = "VimEnter",
 		}),
 
 
