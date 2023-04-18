@@ -17,7 +17,11 @@ local plugins = {
 	-- Status bar
 	lualine = {
 		"nvim-lualine/lualine.nvim",
-		lazy = false,
+		event = { "BufReadPost", "BufNewFile" },
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+			"nvim-lualine/lualine.nvim",
+		}
 	},
 	-- Embedded terminal
 	toggleterm = {
@@ -46,7 +50,7 @@ local plugins = {
 	-- Icons
 	{ "nvim-tree/nvim-web-devicons", lazy = true },
 	-- ui components
-	{ "MunifTanjim/nui.nvim",         lazy = true },
+	{ "MunifTanjim/nui.nvim",        lazy = true },
 }
 
 return require("config.utils").extendPlugins(plugins, "config.options.ui")

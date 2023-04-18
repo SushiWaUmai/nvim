@@ -2,6 +2,7 @@ local plugins = {
 	-- lsp status line
 	navic = {
 		"SmiteshP/nvim-navic",
+		lazy = false,
 		dependencies = {
 			"neovim/nvim-lspconfig",
 		}
