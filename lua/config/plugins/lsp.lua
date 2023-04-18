@@ -64,6 +64,12 @@ local plugins = {
 			"neovim/nvim-lspconfig",
 		}
 	},
+	trouble = {
+		"folke/trouble.nvim",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons"
+		},
+	},
 	-- cmp
 	cmp = {
 		"hrsh7th/nvim-cmp",
