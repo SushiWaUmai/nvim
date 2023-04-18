@@ -1,5 +1,4 @@
 require("config.deferred.lsp.config")
-require("config.deferred.lsp.status")
 local lsp_sig = require("config.deferred.lsp.signature")
 
 local mason_lspconfig_status_ok, mason_lspconfig = pcall(require, "mason-lspconfig")
@@ -32,12 +31,6 @@ if not lsp_inlayhints_status_ok then
 	return
 end
 
-local fidget_status_ok, fidget = pcall(require, "fidget")
-if not fidget_status_ok then
-	return
-end
-
-fidget.setup()
 mason_lspconfig.setup()
 lsp_inlayhints.setup({
 	inlay_hints = {

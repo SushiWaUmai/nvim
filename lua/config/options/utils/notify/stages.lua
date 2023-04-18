@@ -1,9 +1,8 @@
 local stages_util = require("notify.stages.util")
-
 return {
 	function(state)
 		local next_row =
-			stages_util.available_slot(state.open_windows, state.message.height + 2, stages_util.DIRECTION.BOTTOM_UP)
+				stages_util.available_slot(state.open_windows, state.message.height + 2, stages_util.DIRECTION.BOTTOM_UP)
 
 		if not next_row then
 			return nil

@@ -4,15 +4,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	group = augroup,
 	callback = function()
 		vim.defer_fn(function()
-			require("config.deferred.mason")
-			require("config.deferred.lint")
 			require("config.deferred.lsp")
-			require("config.deferred.navic")
 			require("config.deferred.dap")
-			require("config.deferred.copilot")
 			require("config.deferred.telescope")
-			require("config.deferred.crates")
-			require("config.deferred.gitsigns")
 		end, 100)
 	end,
 })
