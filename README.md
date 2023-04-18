@@ -1,5 +1,11 @@
-# My Nvim Config
-This repo is inspired by [ChristianChiarulli's nvim config](https://github.com/ChristianChiarulli/nvim) and [LazyVim](https://github.com/LazyVim/LazyVim/)
+███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗
+████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║
+██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║
+██║╚████║██╔══╝░░██║░░██║░╚████╔╝░██║██║╚██╔╝██║
+██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║
+╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
+
+My personal [Neovim](https://neovim.io/) Configuration
 
 ## Getting Started
 
@@ -18,3 +24,7 @@ Use Alpha or
 ```
 
 to install all plugins.
+
+## References
+- [ChristianChiarulli's nvim config](https://github.com/ChristianChiarulli/nvim) 
+- [LazyVim](https://github.com/LazyVim/LazyVim/)
