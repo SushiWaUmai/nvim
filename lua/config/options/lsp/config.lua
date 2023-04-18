@@ -48,16 +48,12 @@ return {
 		local lsp_keymap = require("config.keymap.lsp")
 		local cmp_capabilities = require("config.options.lsp.cmp")
 		local lsp_inlayhints = require("lsp-inlayhints")
-		local navic = require("nvim-navic")
 
 		-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 		local function setup_language_server(server)
 			local opts = {
 				on_attach = function(client, bufnr)
 					lsp_keymap.on_attach(bufnr)
-					if client.server_capabilities.documentSymbolProvider then
-						navic.attach(client, bufnr)
-					end
 					lsp_inlayhints.on_attach(client, bufnr)
 
 					-- TODO: Move this godot specific stuff to godot config file

@@ -2,7 +2,16 @@ local plugins = {
 	-- lsp status line
 	navic = {
 		"SmiteshP/nvim-navic",
-		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		}
+	},
+	navbuddy = {
+		"SmiteshP/nvim-navbuddy",
+		dependencies = {
+			"SmiteshP/nvim-navic",
+			"MunifTanjim/nui.nvim"
+		},
 	},
 	-- lsp installer
 	mason = {
@@ -11,27 +20,22 @@ local plugins = {
 	-- lsp progress bar
 	fidget = {
 		"j-hui/fidget.nvim",
-		event = { "BufReadPre", "BufNewFile" },
 	},
 	-- linting
 	lint = {
 		"mfussenegger/nvim-lint",
-		event = { "BufReadPre", "BufNewFile" },
 	},
 	-- rust cargo crates management
 	crates = {
 		"saecki/crates.nvim",
-		event = { "BufReadPre", "BufNewFile" },
 	},
 	-- lsp status
 	status = {
 		"nvim-lua/lsp-status.nvim",
-		event = { "BufReadPre", "BufNewFile" },
 	},
 	-- mason lsp config
 	masonlspconfig = {
 		"williamboman/mason-lspconfig.nvim",
-		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"williamboman/mason.nvim",
 		}
@@ -39,17 +43,15 @@ local plugins = {
 	-- lsp inlay hints
 	inlayhints = {
 		"lvimuser/lsp-inlayhints.nvim",
-		event = { "BufReadPre", "BufNewFile" },
 	},
 	-- lsp config
 	config = {
 		"neovim/nvim-lspconfig",
-		event = "VimEnter",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"nvim-lua/lsp-status.nvim",
 			"j-hui/fidget.nvim",
 			"williamboman/mason-lspconfig.nvim",
-			"SmiteshP/nvim-navic",
 			"lvimuser/lsp-inlayhints.nvim",
 			"b0o/SchemaStore.nvim",
 		}
