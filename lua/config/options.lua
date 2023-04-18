@@ -28,7 +28,7 @@ local options = {
 	tabstop = 2,
 	signcolumn = "yes",
 	wrap = false,
-	guifont = "monospace:h17",
+	guifont = "MesloLGS Nerd Font Mono:h12",
 }
 
 for k, v in pairs(options) do
