@@ -32,6 +32,9 @@ local plugins = {
 	masonlspconfig = {
 		"williamboman/mason-lspconfig.nvim",
 		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"williamboman/mason.nvim",
+		}
 	},
 	-- lsp inlay hints
 	inlayhints = {
@@ -41,24 +44,36 @@ local plugins = {
 	-- lsp config
 	config = {
 		"neovim/nvim-lspconfig",
-		event = { "BufReadPre", "BufNewFile" },
+		event = "VimEnter",
+		dependencies = {
+			"nvim-lua/lsp-status.nvim",
+			"j-hui/fidget.nvim",
+			"williamboman/mason-lspconfig.nvim",
+			"SmiteshP/nvim-navic",
+			"lvimuser/lsp-inlayhints.nvim",
+		}
 	},
 	-- Lsp signature
 	signature = {
 		"ray-x/lsp_signature.nvim",
 		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		}
 	},
 	-- cmp
 	cmp = {
 		"hrsh7th/nvim-cmp",
+		dependencies = {
+			"hrsh7th/cmp-nvim-lsp",  -- lsp with cmp
+			"hrsh7th/cmp-buffer",    -- cmp with bufferline
+			"hrsh7th/cmp-path",      -- cmp with path
+			"hrsh7th/cmp-cmdline",   -- cmp in terminal
+			"saadparwaiz1/cmp_luasnip", -- LuaSnip with cmp
+		}
 	},
-	"hrsh7th/cmp-nvim-lsp",    -- lsp with cmp
-	"hrsh7th/cmp-buffer",      -- cmp with bufferline
-	"hrsh7th/cmp-path",        -- cmp with path
-	"hrsh7th/cmp-cmdline",     -- cmp in terminal
-	"onsails/lspkind-nvim",    -- lspkind
-	"L3MON4D3/LuaSnip",        -- LuaSnip with neovim
-	"saadparwaiz1/cmp_luasnip", -- LuaSnip with cmp
+	"L3MON4D3/LuaSnip",    -- LuaSnip with neovim
+	"onsails/lspkind-nvim", -- lspkind
 }
 
 return require("config.utils").extendPlugins(plugins, "config.options.lsp")
