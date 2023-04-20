@@ -74,6 +74,9 @@ return {
 				flags = {
 					debounce_text_changes = 150,
 				},
+				capabilities = {
+					offsetEncoding = "utf-8",
+				}
 			}
 
 			local lang_opts_status_ok, lang_opts = pcall(require, "config.options.lsp.settings." .. server)
