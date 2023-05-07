@@ -30,6 +30,13 @@ local plugins = {
 		"iamcco/markdown-preview.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 	},
+	rest = {
+		"rest-nvim/rest.nvim",
+		event = "VimEnter",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+		}
+	},
 	"nvim-lua/plenary.nvim",     -- Useful lua functions used in lots of plugins
 	"nvim-lua/popup.nvim",       -- An implementation of the Popup API from vim in Neovim
 	"gpanders/editorconfig.nvim", -- Editor config
