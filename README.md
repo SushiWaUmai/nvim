@@ -1,3 +1,5 @@
+<center>
+
 ███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗
 ████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║
 ██╔██╗██║█████╗░░██║░░██║╚██╗░██╔╝██║██╔████╔██║
@@ -5,7 +7,11 @@
 ██║░╚███║███████╗╚█████╔╝░░╚██╔╝░░██║██║░╚═╝░██║
 ╚═╝░░╚══╝╚══════╝░╚════╝░░░░╚═╝░░░╚═╝╚═╝░░░░░╚═╝
 
+<br />
+
 My personal [Neovim](https://neovim.io/) Configuration
+
+</center>
 
 ## Getting Started
 
@@ -25,6 +31,22 @@ Use Alpha or
 
 to install all plugins.
 
+## Setup
+
+### Wakatime
+
+Use the API key from [here](https://wakatime.com/api-key)
+
+
+### Google Calendar
+
+Follow [these steps](https://github.com/itchyny/calendar.vim#important-notice) if you want to add google calendar support.
+
+
 ## References
 - [ChristianChiarulli's nvim config](https://github.com/ChristianChiarulli/nvim) 
 - [LazyVim](https://github.com/LazyVim/LazyVim/)
+
+
+## License
+This project is [MIT](./LICENSE) licensed.
