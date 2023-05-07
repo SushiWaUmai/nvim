@@ -123,3 +123,10 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 		vim.fn.mkdir(vim.fn.fnamemodify(file, ":p:h"), "p")
 	end,
 })
+
+
+local file_exists = require("config.utils").file_exists
+
+if file_exists("~/.cache/calendar.vim/credentials.vim") then
+	vim.cmd([[source ~/.cache/calendar.vim/credentials.vim]])
+end
