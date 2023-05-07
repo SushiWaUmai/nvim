@@ -1,4 +1,4 @@
-<center>
+<div align="center">
 
 ███╗░░██╗███████╗░█████╗░██╗░░░██╗██╗███╗░░░███╗
 ████╗░██║██╔════╝██╔══██╗██║░░░██║██║████╗░████║
@@ -11,7 +11,7 @@
 
 My personal [Neovim](https://neovim.io/) Configuration
 
-</center>
+</div>
 
 ## Getting Started
 
