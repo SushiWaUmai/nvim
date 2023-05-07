@@ -28,5 +28,21 @@ return {
 	config = function(_, opts)
 		local rest = require("rest-nvim")
 		rest.setup(opts)
+
+		local cmdopts = {
+			force = true
+		}
+
+		vim.api.nvim_create_user_command("RestNvim", function()
+			require("rest-nvim").run()
+		end, cmdopts)
+
+		vim.api.nvim_create_user_command("RestNvimPreview", function()
+			require("rest-nvim").run(true)
+		end, cmdopts)
+
+		vim.api.nvim_create_user_command("RestNvimLast", function()
+			require("rest-nvim").last()
+		end, cmdopts)
 	end
 }
