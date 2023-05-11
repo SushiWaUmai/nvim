@@ -1,5 +1,8 @@
 local plugins = {
-	"mfussenegger/nvim-dap", -- dap
+	{
+		"mfussenegger/nvim-dap",
+		event = { "BufReadPre", "BufNewFile" },
+	}, -- dap
 	-- dapui
 	dapui = {
 		"rcarriga/nvim-dap-ui",
