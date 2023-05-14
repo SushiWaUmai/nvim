@@ -37,10 +37,6 @@ local plugins = {
 			"nvim-lua/plenary.nvim",
 		}
 	},
-	calendar = {
-		"itchyny/calendar.vim",
-		event = "VimEnter",
-	},
 	"nvim-lua/plenary.nvim",     -- Useful lua functions used in lots of plugins
 	"nvim-lua/popup.nvim",       -- An implementation of the Popup API from vim in Neovim
 	"gpanders/editorconfig.nvim", -- Editor config
