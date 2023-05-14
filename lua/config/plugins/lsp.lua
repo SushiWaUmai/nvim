@@ -30,6 +30,15 @@ local plugins = {
 	crates = {
 		"saecki/crates.nvim",
 	},
+	-- flutter tools
+	{
+		'akinsho/flutter-tools.nvim',
+		lazy = false,
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			'stevearc/dressing.nvim',
+		},
+	},
 	-- lsp status
 	status = {
 		"nvim-lua/lsp-status.nvim",
