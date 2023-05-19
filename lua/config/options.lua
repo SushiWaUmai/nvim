@@ -39,7 +39,6 @@ end
 vim.opt.shortmess:append("c")
 vim.cmd([[set iskeyword+=-]])
 vim.cmd([[set autoindent]])
-vim.cmd([[set noexpandtab]])
 
 -- shamelessly stolen from https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 -- This file is automatically loaded by plugins.init
