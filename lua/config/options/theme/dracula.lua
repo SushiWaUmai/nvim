@@ -1,5 +1,5 @@
 return {
 	config = function()
-		-- vim.cmd([[colorscheme nord]])
+		vim.cmd([[colorscheme dracula]])
 	end
 }
